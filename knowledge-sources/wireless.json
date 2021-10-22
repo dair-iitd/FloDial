@@ -1,0 +1,312 @@
+{
+    "name": "wireless",
+    "category": "laptops",
+    "problem_description": "You are unable to connect to the wireless network.",
+    "nodes": {
+        "1": {
+            "label": "See Wireless Network?",
+            "terminal": false,
+            "utterance": "Does your laptop show the wireless network you are trying to connect to?"
+        },
+        "2": {
+            "label": "Switch on, enabled?",
+            "terminal": false,
+            "utterance": "Is the wireless adapter switched ON or enabled in software?"
+        },
+        "3": {
+            "label": "Don't be embarrassed, switch can be turned off in normal handling",
+            "terminal": true,
+            "utterance": "Please turn ON the switch or enable the wireless adapter. This should solve your problem."
+        },
+        "4": {
+            "label": "Router active, in range?",
+            "terminal": false,
+            "utterance": "Is the network router active and in range?"
+        },
+        "5": {
+            "label": "Home network?",
+            "terminal": false,
+            "utterance": "Are you trying to connect to a home network?"
+        },
+        "6": {
+            "label": "See known good network?",
+            "terminal": false,
+            "utterance": "Do you see at least one network in your list of available networks?"
+        },
+        "7": {
+            "label": "Reinstall driver, toggle hardware, full reboot if not done. Possible wireless adapter failure, but more often software. Try 3rd party soft fix.",
+            "terminal": true,
+            "utterance": "Restart the wireless adapter and reinstall the latest drivers for the wireless adapter. That should fix the connection problem."
+        },
+        "8": {
+            "label": "Reset home router to defaults. Possible router failure or incompatibility",
+            "terminal": true,
+            "utterance": "Reset the home router settings to defaults. You should now be able to connect to router."
+        },
+        "9": {
+            "label": "Corporate network may be hidden. see admin for settings",
+            "terminal": true,
+            "utterance": "The corporate networks may be hidden. Please contact the company's network administrator for the exact network settings."
+        },
+        "10": {
+            "label": "Get router wireless activity LED blinking, try laptop in same room",
+            "terminal": true,
+            "utterance": "Please take your laptop closer to the router. Make sure the router is turned ON and its wireless activity LED is blinking. You should be able to connect now."
+        },
+        "11": {
+            "label": "Works security off?",
+            "terminal": false,
+            "utterance": "Are you able to connect to the network if the security in your router is disabled?"
+        },
+        "12": {
+            "label": "Password or verification selected incorrect",
+            "terminal": true,
+            "utterance": "I have figured out the issue. You need to use the correct password or security protocol when connecting to the wifi."
+        },
+        "13": {
+            "label": "Works on Ethernet port?",
+            "terminal": false,
+            "utterance": "Can the laptop access the internet if you connect it directly to the router with an Ethernet cable?"
+        },
+        "14": {
+            "label": "Firewall, security blocked?",
+            "terminal": false,
+            "utterance": "Is your laptop's firewall blocking you from getting onto the web?"
+        },
+        "15": {
+            "label": "Live internet at router?",
+            "terminal": false,
+            "utterance": "Is your router's live internet LED turned ON?"
+        },
+        "16": {
+            "label": "Even if internet LED lit, try power down router reset. If link LED never active, router or ISP network problem",
+            "terminal": true,
+            "utterance": "This is an ISP problem. You should reach out to your network provider."
+        },
+        "17": {
+            "label": "If router link good, settings or laptop software issue",
+            "terminal": true,
+            "utterance": "Your router is malfunctioning which is why you are unable to connect to the internet."
+        },
+        "18": {
+            "label": "Try default settings, then look for specific exclusions for network",
+            "terminal": true,
+            "utterance": "Restore to default firewall settings and remove network rules. Reboot your laptop and you will be able to connect to the internet now."
+        },
+        "19": {
+            "label": "Default settings on router?",
+            "terminal": false,
+            "utterance": "Does the router have default settings?"
+        },
+        "20": {
+            "label": "Intermittent connection?",
+            "terminal": false,
+            "utterance": "Are you facing an intermittent connection?"
+        },
+        "21": {
+            "label": "All 802.11g?",
+            "terminal": false,
+            "utterance": "Are both your laptop and router working on the 802.11g protocols?"
+        },
+        "22": {
+            "label": "Laptop works public network?",
+            "terminal": false,
+            "utterance": "Does your laptop connect to any public WiFi network?"
+        },
+        "23": {
+            "label": "Laptop wireless adapter fault or OS software settings. Try latestdriver, software rescue",
+            "terminal": true,
+            "utterance": "There is some issue with the laptop's wireless adapter or OS software settings. You need to install the latest drivers to fix this."
+        },
+        "24": {
+            "label": "Check router defaults set, no security or MAC addressing, reboot router. Continued problem indicate wireless router failure or incompatibility",
+            "terminal": true,
+            "utterance": "Your wireless router is malfunctioning. Please get it replaced."
+        },
+        "25": {
+            "label": "Try compatibility modes, but be prepared to update older 802.11b hardware",
+            "terminal": true,
+            "utterance": "The router protocol is incompatibility with your laptop. Please change your router's protocol to one that is compatible with your laptop."
+        },
+        "26": {
+            "label": "Phone, Bluetooth interfere?",
+            "terminal": false,
+            "utterance": "Does your wireless connection slows down or gets flaky when someone nearby is using a phone, a bluetooth device or other such sources of interference?"
+        },
+        "27": {
+            "label": "Possible ISP problem or software time-out. More likely router or laptop hardware, or weather/wind influence on incoming land line",
+            "terminal": true,
+            "utterance": "It is a problem with the Internet Service Provider. Please contact them."
+        },
+        "28": {
+            "label": "Try other location for laptop, limiting your own use of possible interference sources",
+            "terminal": true,
+            "utterance": "Increase the distance between the laptop and the interfering device or don't use the interfering device when you're on the Internet. This should fix the internet connection issue."
+        },
+        "29": {
+            "label": "Restore router defaults through direct IP connection.",
+            "terminal": true,
+            "utterance": "Restore the router settings to default through the router settings page. Restart the router and you will be able to connect to the internet."
+        }
+    },
+    "edges": {
+        "1": {
+            "no": "2",
+            "yes": "11"
+        },
+        "2": {
+            "no": "3",
+            "yes": "4"
+        },
+        "4": {
+            "no": "10",
+            "yes": "5"
+        },
+        "5": {
+            "no": "9",
+            "yes": "6"
+        },
+        "6": {
+            "no": "7",
+            "yes": "8"
+        },
+        "11": {
+            "no": "13",
+            "yes": "12"
+        },
+        "13": {
+            "no": "14",
+            "yes": "19"
+        },
+        "14": {
+            "no": "15",
+            "yes": "18"
+        },
+        "15": {
+            "no": "16",
+            "yes": "17"
+        },
+        "19": {
+            "no": "29",
+            "yes": "20"
+        },
+        "20": {
+            "no": "21",
+            "yes": "26"
+        },
+        "21": {
+            "no": "25",
+            "yes": "22"
+        },
+        "22": {
+            "no": "23",
+            "yes": "24"
+        },
+        "26": {
+            "no": "27",
+            "yes": "28"
+        }
+    },
+    "supporting_faqs": [
+        {
+            "q": "How do I check if my laptop can see the wireless network?",
+            "a": "Please check if the network name is present in the list that appears when you click the network icon in the system tray.",
+            "id": "0"
+        },
+        {
+            "q": "How do I check if my wireless adapted is enabled in software?",
+            "a": "Use the Wi-Fi icon located in the system tray - the section to the far right of the Taskbar. Click on the icon and here you can toggle the Wi-Fi.",
+            "id": "1"
+        },
+        {
+            "q": "How do I check if the router is in range?",
+            "a": "take your laptop right next to the router you are trying to connect to and check if its visible.",
+            "id": "2"
+        },
+        {
+            "q": "What is a home network?",
+            "a": "A network that isnt a corporate and campus networks.",
+            "id": "3"
+        },
+        {
+            "q": "Why do you ask if I'm in a home network?",
+            "a": "Some network administrators of large businesses hide their network from casual encounters with the outside world. So the solution depends upom whether you are trying to connect to a home network or not.",
+            "id": "4"
+        },
+        {
+            "q": "How do I check for known network?",
+            "a": "When you take your laptop to a place with public WiFi or turn on a hotspot, your laptop should see a known good network with the wireless adapter turned on and enabled.",
+            "id": "5"
+        },
+        {
+            "q": "How do I reset home router settings to default?",
+            "a": "The exact steps to reset home router settings to default depend on the router model. You can find this information in the router's manual or by searching for that router on the internet.",
+            "id": "6"
+        },
+        {
+            "q": "How do I disable security in my router?",
+            "a": "You can access the router settings directly through your browser. This doesn't require a live Internet connection. You just type the IP address of your router into the address bar, and provide the default password, assuming you haven't changed it.",
+            "id": "7"
+        },
+        {
+            "q": "What is the IP address of my router?",
+            "a": "The IP address should be '192.168.1.1' or '192.168.0.1'.",
+            "id": "8"
+        },
+        {
+            "q": "What is the username and password for my router?",
+            "a": "Default username is 'admin'. Assuming you haven't changed the password, the default password is be 'admin' or the word 'password', both in small caps.",
+            "id": "9"
+        },
+        {
+            "q": "How do I check if my laptop's firewall is blocking the connection?",
+            "a": "Search for 'windows firewall' app in the start menu search. Click on the 'Advanced Settings' options on the left pane to review the firewall rules.",
+            "id": "10"
+        },
+        {
+            "q": "How do I check if my laptop's security software is blocking the connection?",
+            "a": "If this is a laptop that belongs to your employer and has been set up to run on a corporate network, you should talk to your network administrator about this issue. If it is a home laptop, you will have to check the appropriate security software's manual to see if it is blocking the internet connection.",
+            "id": "11"
+        },
+        {
+            "q": "What is a firewall?",
+            "a": "A firewall is a security feature that ensures only good data enters your laptop and tries to filters out malwares, viruses and other malicious data packets.",
+            "id": "12"
+        },
+        {
+            "q": "How do I check if my router is connected to the internet?",
+            "a": "Most routers come equipped with a status light for the Internet connection. If you restart the router you should see activity on the Internet LED as the router tries to gains an Internet connection.",
+            "id": "13"
+        },
+        {
+            "q": "Why does unplugging the router doesn't restore defaut settings?",
+            "a": "Router settings are stored in a non-volatile memory which is why unplugging the router doesn't affect the router settings.",
+            "id": "14"
+        },
+        {
+            "q": "How do I check if my intermittent connection is because of a weak signal?",
+            "a": "Relocate the laptop closer to the router or move the router to a more central location in the workspace.",
+            "id": "15"
+        },
+        {
+            "q": "What can cause an intermittent connection?",
+            "a": "Mismatched hardware or protocols can result in intermittent operation, just like interference, failing hardware, or a poor signal from the ISP.",
+            "id": "16"
+        },
+        {
+            "q": "What is 802.11g?",
+            "a": "IEEE 802.11g is an IEEE wireless computer networking standards which specifies the protocols for implementing wireless local area network Wi-Fi computer communication.",
+            "id": "17"
+        },
+        {
+            "q": "How do I check if my laptop is using 802.11g protocols?",
+            "a": "Open 'Settings' menu and then go to 'Network and Internet'. Go to the WiFi settings and click on 'Advanced Options' to view the protocol being used. It would appear in the description field.",
+            "id": "18"
+        },
+        {
+            "q": "How do I check if my router is using 802.11g protocols?",
+            "a": "You can check that in the router console. You might have to go to 'Advanced Settings' to see it.",
+            "id": "19"
+        }
+    ]
+}

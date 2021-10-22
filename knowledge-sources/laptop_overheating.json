@@ -1,0 +1,229 @@
+{
+    "name": "laptop_overheating",
+    "category": "laptops",
+    "problem_description": "Your laptop is overheating.",
+    "nodes": {
+        "1": {
+            "label": "smoke or burning odor",
+            "terminal": false,
+            "utterance": "Can you smell burning or see smoke coming out of the laptop?"
+        },
+        "2": {
+            "label": "high air temp or sun?",
+            "terminal": false,
+            "utterance": "Are you using your laptop in a hot environment?"
+        },
+        "3": {
+            "label": "is battery too hot?",
+            "terminal": false,
+            "utterance": "Please tell me if your laptop battery is overheating?"
+        },
+        "4": {
+            "label": "proceed to battery flowchart",
+            "terminal": true,
+            "utterance": "Shut down your laptop and remove your battery. Allow the laptop to cool down and use it on the AC adapter. If the problem is resolved now, then your battery is either faulty or too old."
+        },
+        "5": {
+            "label": "don't use in direct sunlight, leave in car in hot weather. Try extra cooling system",
+            "terminal": true,
+            "utterance": "Laptops are designed for operating in a normal temperature range. So avoid using it in direct sunlight or in hot temperatures. You can also consider using extra cooling system for your laptop."
+        },
+        "6": {
+            "label": "fan never runs?",
+            "terminal": false,
+            "utterance": "Is your laptop's fan running when it overheats?"
+        },
+        "7": {
+            "label": "recent upgrade of BIOS?",
+            "terminal": false,
+            "utterance": "Did you recently upgrade your laptop's BIOS?"
+        },
+        "8": {
+            "label": "laptop on hard, flat surface",
+            "terminal": false,
+            "utterance": "Are you using your laptop on a hard and flat surface?"
+        },
+        "9": {
+            "label": "BIOS upgrade should only be done if absolutely necessary. If problem appeared after, restore old BIOS",
+            "terminal": true,
+            "utterance": "The overheating problem might be due to the recent BIOS upgrade. Please restore the original BIOS version to fix the problem."
+        },
+        "10": {
+            "label": "never run in shoulder bag, on bed. Sides, back, bottom must be clear",
+            "terminal": true,
+            "utterance": "Please use your laptop on hard and flat surfaces. On a bed or your lap, the vent gets blocked which causes the laptop to overheat."
+        },
+        "11": {
+            "label": "laptop shuts down?",
+            "terminal": false,
+            "utterance": "Does your laptop shut down automatically when it overheats?"
+        },
+        "12": {
+            "label": "cool settings BIOS and OS?",
+            "terminal": false,
+            "utterance": "Did you change the laptop power management settings recently?"
+        },
+        "13": {
+            "label": "Hot spot, fan always runs?",
+            "terminal": false,
+            "utterance": "Is your laptop fan running all the time when you use the laptop?"
+        },
+        "14": {
+            "label": "Low battery, boot order?",
+            "terminal": false,
+            "utterance": "Is your BIOS set to hibernate the laptop in case of low battery?"
+        },
+        "15": {
+            "label": "Make sure any BIOS and OS power management settings are set for cool operation",
+            "terminal": true,
+            "utterance": "Revert your power management settings to the previous one. This should prevent your laptop from overheating."
+        },
+        "16": {
+            "label": "data loss, lockups?",
+            "terminal": false,
+            "utterance": "Does your laptop freeze when it overheats?"
+        },
+        "17": {
+            "label": "first try to clean all vents, blow out with canned air",
+            "terminal": true,
+            "utterance": "I understand the issue now. You will have to clean all the air vents of your laptop and replace the active heat sink."
+        },
+        "18": {
+            "label": "check auto-hibernate, can simulate overheating shutdown",
+            "terminal": true,
+            "utterance": "Change the auto-hibernate mode from the BIOS settings. Auto-hibernate triggered by low battery can trigger overheating shutdown."
+        },
+        "19": {
+            "label": "hardware failure, fan or temperature sensor",
+            "terminal": true,
+            "utterance": "You are facing overheating because of a hardware failure. You laptop's fan or temperature sensor is not working properly and you should replace it."
+        },
+        "20": {
+            "label": "may not be overheating, try other flowcharts",
+            "terminal": true,
+            "utterance": "You are facing overheating because of a hardware failure. You laptop's motherboard or RAM is not working properly and you should get it checked."
+        },
+        "21": {
+            "label": "same problem low temp?",
+            "terminal": false,
+            "utterance": "Does your laptop freeze even when it is not hot?"
+        },
+        "22": {
+            "label": "proceed motherboard, CPU, RAM flowchart",
+            "terminal": true,
+            "utterance": "This issue is not related to overheating. You laptop's motherboard or RAM is not working properly and you should get it checked."
+        },
+        "23": {
+            "label": "AC adapter in use?",
+            "terminal": true,
+            "utterance": "Unplug the AC adapter and shut down your laptop. Locate the burnt component of the motherboard and replace it. That should fix your problem."
+        },
+        "26": {
+            "label": "REPEATED:first try to clean all vents, blow out with canned air",
+            "terminal": true,
+            "utterance": "I understand the issue now. You will have to clean all the air vents of your laptop and replace the active heat sink."
+        },
+        "27": {
+            "label": "REPEATED:first try to clean all vents, blow out with canned air",
+            "terminal": true,
+            "utterance": "I understand the issue now. You will have to clean all the air vents of your laptop and replace the active heat sink."
+        }
+    },
+    "edges": {
+        "1": {
+            "no": "2",
+            "yes": "23"
+        },
+        "2": {
+            "no": "3",
+            "yes": "5"
+        },
+        "3": {
+            "no": "6",
+            "yes": "4"
+        },
+        "6": {
+            "no": "7",
+            "yes": "8"
+        },
+        "7": {
+            "no": "12",
+            "yes": "9"
+        },
+        "8": {
+            "no": "10",
+            "yes": "11"
+        },
+        "11": {
+            "no": "13",
+            "yes": "14"
+        },
+        "12": {
+            "no": "19",
+            "yes": "15"
+        },
+        "13": {
+            "no": "16",
+            "yes": "17"
+        },
+        "14": {
+            "no": "26",
+            "yes": "18"
+        },
+        "16": {
+            "no": "20",
+            "yes": "21"
+        },
+        "21": {
+            "no": "27",
+            "yes": "22"
+        }
+    },
+    "supporting_faqs": [
+        {
+            "q": "Why should I avoid using my laptop at high temperatures?",
+            "a": "Laptops are designed for operating in a normal temperature range. So avoid using it in direct sunlight or in hot temperatures. You can also consider using extra cooling system for your laptop.",
+            "id": "0"
+        },
+        {
+            "q": "What is BIOS?",
+            "a": "BIOS stands for 'Basic Input Output System' and it is the set of instructions that are used when you start your computer. It initialises your hardware, loads up the operating system and performs other such booting tasks.",
+            "id": "1"
+        },
+        {
+            "q": "How do I access BIOS?",
+            "a": "BIOS is present on a hardware chip in your computer. You can access BIOS setup by pressing a key like F10 or F12 just when your computer boots up.",
+            "id": "2"
+        },
+        {
+            "q": "How do I restore my laptop BIOS to the original version?",
+            "a": "In order to restore the BIOS to the original version, you would do the same process as flashing the BIOS but this time with the old files from the manufacturer website.",
+            "id": "3"
+        },
+        {
+            "q": "Why should I use my laptop on hard, flat and spacious surfaces?",
+            "a": "Laptops are designed to run on hard, flat surfaces. The air vent gets blocked in bed, on loose clothing, or on a badly cluttered table which ultimately causes the laptop to overheat.",
+            "id": "4"
+        },
+        {
+            "q": "Why do changes in laptop power management settings result in overheating?",
+            "a": "Some laptops give users an option to run quietly, which usually means reducing fan speed which may leads to overheating. The power management profile for playing movies may try to limit fan noise at the expense of heat.",
+            "id": "5"
+        },
+        {
+            "q": "How do I check if BIOS is set to hibernate the laptop?",
+            "a": "You can check that in your BIOS settings. You can access it by pressing a key like F10 or F12 just when your computer boots up.",
+            "id": "6"
+        },
+        {
+            "q": "How do I clean the air vents of my laptop?",
+            "a": "You can clean up the dust in your laptop's air vents with Q-tips or with a safe electronics vacuum.",
+            "id": "7"
+        },
+        {
+            "q": "What is a active heat sink?",
+            "a": "An active heat sink is a component used to cool down your computer. It is a finned component on top of a motherboard chip and should be easy to identify.",
+            "id": "8"
+        }
+    ]
+}

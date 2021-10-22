@@ -1,0 +1,255 @@
+{
+    "name": "laptop_drive",
+    "category": "laptops",
+    "problem_description": "Your laptop has some hard drive issues.",
+    "nodes": {
+        "1": {
+            "label": "LCD or monitor live?",
+            "terminal": false,
+            "utterance": "Are you able to see anything on your laptop's screen?"
+        },
+        "2": {
+            "label": "OS boots?",
+            "terminal": false,
+            "utterance": "Does the laptop boot normally and display the Windows Desktop?"
+        },
+        "3": {
+            "label": "tin can or clunking noise?",
+            "terminal": false,
+            "utterance": "Did your laptop hard drive start making clunking noises recently?"
+        },
+        "5": {
+            "label": "replace drive if critical",
+            "terminal": true,
+            "utterance": "This is a sign of impending hard drive failure. You should back up your data and consider replacing the hard drive."
+        },
+        "6": {
+            "label": "boots w/ AC power?",
+            "terminal": false,
+            "utterance": "Please plug in the AC power adapter to your laptop. Does it boot now?"
+        },
+        "7": {
+            "label": "Boots no external connex?",
+            "terminal": false,
+            "utterance": "Does the laptop boot after removing all external devices such as external keyboard, mouse and printer?"
+        },
+        "8": {
+            "label": "determine spoiler by process of elimination",
+            "terminal": true,
+            "utterance": "The problem isn't the hard drive, it's a faulty external device. The device has either a hardware failure or a corrupted driver."
+        },
+        "9": {
+            "label": "Drive register in BIOS?",
+            "terminal": false,
+            "utterance": "Does the laptop BIOS show that the hard drive is installed?"
+        },
+        "10": {
+            "label": "OK if reseat in bay?",
+            "terminal": false,
+            "utterance": "The hard drive connector might be loose. Does the BIOS show the hard drive when you disconnect and reconnect it?"
+        },
+        "11": {
+            "label": "Check hold-down screw not missing",
+            "terminal": true,
+            "utterance": "If the hard drive connector frequently gets loose, consider replacing the connector to resolve the issue."
+        },
+        "12": {
+            "label": "Hardware failure, drive, connector or board level",
+            "terminal": true,
+            "utterance": "The only way to fix the hard drive failure is to replace it."
+        },
+        "13": {
+            "label": "proceed to laptop battery problem",
+            "terminal": true,
+            "utterance": "The problem is with your battery and not the hard drive. Please get the battery repaired or replaced."
+        },
+        "14": {
+            "label": "OS not found?",
+            "terminal": false,
+            "utterance": "Do you get a 'No Operating System' message when you start the laptop?"
+        },
+        "15": {
+            "label": "New drives require OS installation. Existing drive try virus rescue, OS repair",
+            "terminal": true,
+            "utterance": "Please make sure the boot order is correct. If the boot order is right, then reinstall the OS."
+        },
+        "16": {
+            "label": "OS splash screen?",
+            "terminal": false,
+            "utterance": "When you start the laptop, do you see the splash screen with the Windows logo?"
+        },
+        "17": {
+            "label": "Boot safe mode?",
+            "terminal": false,
+            "utterance": "Are you able to boot your Windows in Safe Mode?"
+        },
+        "18": {
+            "label": "Classic driver conflict or problem with recently installed software",
+            "terminal": true,
+            "utterance": "You have an issue with a recently installed application or device driver. Start Windows in Safe Mode and revert your computer to a previous restore point."
+        },
+        "19": {
+            "label": "Virus rescue work?",
+            "terminal": false,
+            "utterance": "Do you have a working rescue CD?"
+        },
+        "20": {
+            "label": "Boots OS CD or DVD?",
+            "terminal": false,
+            "utterance": "Does your laptop boot using a Windows DVD?"
+        },
+        "21": {
+            "label": "Change boot order to D: first. Try know good OS CD or DVD as test.",
+            "terminal": true,
+            "utterance": "You have a board level controller failure. Please replace the controller in your motherboard."
+        },
+        "22": {
+            "label": "Try option to repair existing installation. If repair works, problem was file corruption, otherwise, if data is backed up, try nuke and pave.",
+            "terminal": true,
+            "utterance": "Try the option to repair existing installation after booting using the Windows DVD. If this doesn't work then you need to reinstall Windows but all your data will be erased."
+        },
+        "23": {
+            "label": "Lucky, make sure that your virus and malware software are loading at boot time and updating automatically.",
+            "terminal": true,
+            "utterance": "Use the rescue disk to identify any virus or malware in your Windows and restore your OS to a bootable condition."
+        },
+        "24": {
+            "label": "partition manager see drive?",
+            "terminal": false,
+            "utterance": "Please run the partition manager software from the Windows DVD. Does the partition manager detect the hard drive?"
+        },
+        "25": {
+            "label": "Reseat drive, try drive in PC with kit. A rescue formatter from manufacturer may fix drive but will erase ALL data.",
+            "terminal": true,
+            "utterance": "The hard drive is corrupted. You need to format the hard drive and reinstall the OS."
+        },
+        "26": {
+            "label": "Any fan or drive sound?",
+            "terminal": false,
+            "utterance": "Can you hear fan or hard drive sounds from your laptop?"
+        },
+        "27": {
+            "label": "Proceed to LCD failure",
+            "terminal": true,
+            "utterance": "the problem isn't related to the hard drive. Your LCD display is malfunctioning and you need to get it fixed."
+        },
+        "28": {
+            "label": "Proceed to laptop power failure",
+            "terminal": true,
+            "utterance": "Your hard drive is perfectly fine. You have a battery failure."
+        },
+        "29": {
+            "label": "EXTRA-try hard drive in another laptop",
+            "terminal": false,
+            "utterance": "When you connect your hard drive to another laptop, does it work?"
+        },
+        "30": {
+            "label": "EXTRA-you have a problem in the main board of your laptop",
+            "terminal": true,
+            "utterance": "You don't have a hard drive problem but your laptop's motherboard is malfunctioning. Please get it replaced."
+        },
+        "33": {
+            "label": "EXTRA-Try option to repair existing installation. If repair works, problem was file corruption, otherwise, if data is backed up, try nuke and pave.",
+            "terminal": true,
+            "utterance": "Try the option to repair existing installation after booting using the Windows DVD. If this doesn't work then you need to reinstall Windows but all your data will be erased."
+        }
+    },
+    "edges": {
+        "1": {
+            "no": "26",
+            "yes": "2"
+        },
+        "2": {
+            "no": "6",
+            "yes": "3"
+        },
+        "3": {
+            "yes": "5"
+        },
+        "6": {
+            "no": "7",
+            "yes": "13"
+        },
+        "7": {
+            "no": "9",
+            "yes": "8"
+        },
+        "9": {
+            "no": "10",
+            "yes": "14"
+        },
+        "10": {
+            "no": "29",
+            "yes": "11"
+        },
+        "14": {
+            "no": "16",
+            "yes": "15"
+        },
+        "16": {
+            "no": "24",
+            "yes": "17"
+        },
+        "17": {
+            "no": "19",
+            "yes": "18"
+        },
+        "19": {
+            "no": "20",
+            "yes": "23"
+        },
+        "20": {
+            "no": "21",
+            "yes": "22"
+        },
+        "24": {
+            "no": "25",
+            "yes": "33"
+        },
+        "26": {
+            "no": "28",
+            "yes": "27"
+        },
+        "29": {
+            "no": "12",
+            "yes": "30"
+        }
+    },
+    "supporting_faqs": [
+        {
+            "q": "How do I check if the hard drive is being detected in the BIOS?",
+            "a": "Restart your laptop and open the BIOS setup. The landing page should show information about your hard drive.",
+            "id": "0"
+        },
+        {
+            "q": "How do I check if the boot order is correct?",
+            "a": "Restart your laptop and open the BIOS setup. Navigate to the Boot tab and the boot order will be displayed there.",
+            "id": "1"
+        },
+        {
+            "q": "How do I boot my Windows in Safe Mode?",
+            "a": "Restart your laptop and open the BIOS. Navigate to the Advanced Boot Options and you will see the option to boot Windows in Safe Mode.",
+            "id": "2"
+        },
+        {
+            "q": "How do I revert Windows to a previous restore point?",
+            "a": "System Protection tab in System properties has the options to revert your computer to a previous restore point.",
+            "id": "3"
+        },
+        {
+            "q": "What is a rescue CD?",
+            "a": "Rescue CD can help you investigate issues with your Windows and detect any security threats like viruses. It can help you restore your operating system to a bootable condition.",
+            "id": "4"
+        },
+        {
+            "q": "What is a Windows DVD?",
+            "a": "It is an operating system disc that usually comes with your laptop or when you buy the Windows OS.",
+            "id": "5"
+        },
+        {
+            "q": "How can an OS get corrputed?",
+            "a": "The most probably reasons for a corrupt OS are computer viruses or operator error, writing over or deleting required system files.",
+            "id": "6"
+        }
+    ]
+}

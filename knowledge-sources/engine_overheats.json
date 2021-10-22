@@ -1,0 +1,306 @@
+{
+    "name": "engine_overheats",
+    "category": "cars",
+    "problem_description": "Your car is overheating.",
+    "nodes": {
+        "1": {
+            "label": "Steaming or leak?",
+            "terminal": false,
+            "utterance": "Is there steaming or leak from the cooling system?"
+        },
+        "2": {
+            "label": "Smell antifreeze?",
+            "terminal": false,
+            "utterance": "Do you smell antifreeze? It's usually a sweet smell."
+        },
+        "3": {
+            "label": "Needle gauge?",
+            "terminal": false,
+            "utterance": "Does you car have a engine temperature gauge on the dashboard?"
+        },
+        "4": {
+            "label": "Check owners manual for special light behaviour",
+            "terminal": false,
+            "utterance": "Is your coolant temperature warning light ON?"
+        },
+        "5": {
+            "label": "Anti-freeze level good?",
+            "terminal": false,
+            "utterance": "Is the antifreeze level in your overflow tank up to the mark?"
+        },
+        "6": {
+            "label": "Make-up with 50/50",
+            "terminal": true,
+            "utterance": "Make coolant with a 50/50 split of antifreeze and water. Pour the mix into the coolant reservoir. This should fix the overheating problem."
+        },
+        "7": {
+            "label": "Fan operate?",
+            "terminal": false,
+            "utterance": "Does the fan turn on when the engine warms up?"
+        },
+        "8": {
+            "label": "Test fan motor with a direct connection, check for fan fuse, replace the temperature sensor.",
+            "terminal": true,
+            "utterance": "It's an issue with the fan or the temperature sensor is failing. Test fan motor with direct connection or replace the temperature sensor."
+        },
+        "9": {
+            "label": "Flow good?",
+            "terminal": false,
+            "utterance": "Is the coolant flowing through the radiator?"
+        },
+        "10": {
+            "label": "Pump failure or blockage",
+            "terminal": true,
+            "utterance": "It seems like the water pump is bad or the engine/radiator is so gunked up that the water can't flow through. You will have to get that fixed to solve the problem."
+        },
+        "11": {
+            "label": "Flushed engine?",
+            "terminal": false,
+            "utterance": "Have you tried flushing the engine?"
+        },
+        "12": {
+            "label": "Flush engine with kit, cleaning solution and garden hose, fill with new 50/50 antifreeze.",
+            "terminal": true,
+            "utterance": "Flush your engine with a flushing kit or solution. Then refill with new engine oil. Then you will be good to go."
+        },
+        "13": {
+            "label": "Checked thermostat",
+            "terminal": false,
+            "utterance": "Is your car's thermostat working properly?"
+        },
+        "14": {
+            "label": "Throw the thermostat in boiling water and see if it opens. Or just replace it.",
+            "terminal": true,
+            "utterance": "Just replace your car's thermostat. That will solve your overheating problem."
+        },
+        "15": {
+            "label": "Checked timing?",
+            "terminal": false,
+            "utterance": "Have you checked if your car's ignition timing is correct?"
+        },
+        "16": {
+            "label": "Improper ignition timing can lead to overheating.",
+            "terminal": true,
+            "utterance": "Improper ignition timing leads a car to overheat in otherwise normal driving conditions. This is what's causing the issue."
+        },
+        "17": {
+            "label": "If occasional overheating, maybe overdriving. Otherwise, suspect improper thermostat installation.",
+            "terminal": true,
+            "utterance": "The overheating problem is being caused by overdriving or improper thermostat installation. Hope this helps."
+        },
+        "18": {
+            "label": "Returns to normal?",
+            "terminal": false,
+            "utterance": "If you pull over and stay idle, does the car's temperature return to normal?"
+        },
+        "19": {
+            "label": "Sticking, air-locked, or wrong temperature thermostat.",
+            "terminal": true,
+            "utterance": "The car's thermostat is not opening in time because of which the coolant is unable to leave the engine thereby causing overheating. This is what's causing the issue."
+        },
+        "20": {
+            "label": "It's a leak, you just haven't found it yet.",
+            "terminal": true,
+            "utterance": "I have figured out the problem. There's an antifreeze leak which is probably too small to find. Please get it sealed."
+        },
+        "21": {
+            "label": "Cap steaming",
+            "terminal": false,
+            "utterance": "Is the radiator cap steaming and hissing?"
+        },
+        "22": {
+            "label": "Overflow dripping?",
+            "terminal": false,
+            "utterance": "Do you see coolant drips on the ground from overflow reservoir?"
+        },
+        "23": {
+            "label": "Radiator leaking?",
+            "terminal": false,
+            "utterance": "Is your car's radiator leaking from finned section?"
+        },
+        "24": {
+            "label": "Hose leak?",
+            "terminal": false,
+            "utterance": "Is there a pinhole leak in radiator hose or at the clamps?"
+        },
+        "25": {
+            "label": "Engine leak?",
+            "terminal": false,
+            "utterance": "Is antifreeze leaking from the engine?"
+        },
+        "26": {
+            "label": "Heater core leak?",
+            "terminal": false,
+            "utterance": "Is your car's heater core leaking?"
+        },
+        "27": {
+            "label": "Heater core hoses, pressure test core, repair or replace.",
+            "terminal": true,
+            "utterance": "I think your heater core is malfunctioning. Pressure test your heater core. Repair or replace the heater core hoses. Then your problem will be solved."
+        },
+        "28": {
+            "label": "Water pump?",
+            "terminal": false,
+            "utterance": "Is there a leak at the car's water pump?"
+        },
+        "29": {
+            "label": "Remove leaking part and installing with a new gasket.",
+            "terminal": true,
+            "utterance": "Remove leaking part of the water pump and install a new one along with a new gasket to prevent leaks. That will solve your problem."
+        },
+        "30": {
+            "label": "Leak at water pump almost always means water pump failure.",
+            "terminal": true,
+            "utterance": "I believe the issue is water pump failure. Please replace the water pump to fix your overheating problem."
+        },
+        "31": {
+            "label": "Replace hose or shorten and reclamp if leak is under clamp.",
+            "terminal": true,
+            "utterance": "Replace the radiator hose and properly refill the system. If the leak is under the clamp, try tightening the clamp or shorten the hose and reclamp it. This should solve your problem."
+        },
+        "32": {
+            "label": "Problem even if over-heated. Try stop-leak product or repair or replace radiator.",
+            "terminal": true,
+            "utterance": "You should get the radiator repaired or replaced. You can also use a stop-leak product from an auto parts store as a temporary fix."
+        },
+        "33": {
+            "label": "Best place for a drip but indicates engine too hot or cooling system overfilled.",
+            "terminal": true,
+            "utterance": "I understand now what is causing you trouble. The cooling system has been overfilled with antifreeze or there is a crack in the reservoir causing a leak when the engine heats up."
+        },
+        "34": {
+            "label": "Pressure release working as intended. Check antifreeze level on overflow.",
+            "terminal": true,
+            "utterance": "Your car's pressure relief system has failed so replacing the cap and properly filling the cooling system will solve the problem."
+        },
+        "35": {
+            "label": "check your manual for instructions on what to do.",
+            "terminal": true,
+            "utterance": "To solve this issue, you will have to use the owners manual for instructions on what to do in case of your coolant 'Temperature' light's behavior."
+        }
+    },
+    "edges": {
+        "1": {
+            "no": "2",
+            "yes": "21"
+        },
+        "2": {
+            "no": "3",
+            "yes": "20"
+        },
+        "3": {
+            "no": "4",
+            "yes": "18"
+        },
+        "4": {
+            "yes": "35"
+        },
+        "5": {
+            "no": "6",
+            "yes": "7"
+        },
+        "7": {
+            "no": "8",
+            "yes": "9"
+        },
+        "9": {
+            "no": "10",
+            "yes": "11"
+        },
+        "11": {
+            "no": "12",
+            "yes": "13"
+        },
+        "13": {
+            "no": "14",
+            "yes": "15"
+        },
+        "15": {
+            "no": "16",
+            "yes": "17"
+        },
+        "18": {
+            "no": "5",
+            "yes": "19"
+        },
+        "21": {
+            "no": "22",
+            "yes": "34"
+        },
+        "22": {
+            "no": "23",
+            "yes": "33"
+        },
+        "23": {
+            "no": "24",
+            "yes": "32"
+        },
+        "24": {
+            "no": "25",
+            "yes": "31"
+        },
+        "25": {
+            "no": "26",
+            "yes": "28"
+        },
+        "26": {
+            "yes": "27"
+        },
+        "28": {
+            "no": "29",
+            "yes": "30"
+        }
+    },
+    "supporting_faqs": [
+        {
+            "q": "What is antifreeze?",
+            "a": "Antifreeze is a chemical that lowers the freezing point of water and is used in the coolant for a car's engine.",
+            "id": "0"
+        },
+        {
+            "q": "How do I check antifreeze level?",
+            "a": "New cars put the antifreeze level marks on the overflow tank next to the radiator. They usually have a high and low or hot and cold mark. The level should be somewhere between the two if the cooling system is operating properly.",
+            "id": "1"
+        },
+        {
+            "q": "How to check if the coolant is flowing through the radiator?",
+            "a": "Wait for the engine to cool, remove the cap slowly, so that the pent up pressure can vent, and then siphon off enough antifreeze to enable you to see the top of the radiator core. Then you can start the car up, and when the thermostat opens, you should see a very healthy flow.",
+            "id": "2"
+        },
+        {
+            "q": "Why do I need to flush the engine?",
+            "a": "You should flush your engine to clean any gunk or deposits that might have collected in your engine.",
+            "id": "3"
+        },
+        {
+            "q": "How to flush the engine?",
+            "a": "You will need a flushing kit or solution which you can find in an auto parts store. Use the cleaning solution to run in the engine before flushing. The kit will have a plastic plumbing 'T' with some clamps and a screw-on cap that you splice into your heater hose and attach a garden hose. Then you can flush the system out.",
+            "id": "4"
+        },
+        {
+            "q": "How do I check if my thermostat is working?",
+            "a": "Best way to check your thermostat is to put it in boiling water and see if it opens.",
+            "id": "5"
+        },
+        {
+            "q": "What is the role of a thermostat in a car?",
+            "a": "The thermostat is placed in the path of the coolant exiting the engine. When the engine warms up, the spring and slug are submerged in the hot coolant pushing to leave the engine, but are restricted by the thermostat until it opens. Thus thermostat regulates the temperature by controlling the flow of the coolant.",
+            "id": "6"
+        },
+        {
+            "q": "how to check ignition timing?",
+            "a": "You will need a timing light or timing gun. Check it's instruction manual for more details on the steps required.",
+            "id": "7"
+        },
+        {
+            "q": "What is the role of a radiator in a car?",
+            "a": "A radiator transfers heat from one location to another. In cars, it is used to cool down the hot coolant and thus, the engine as well.",
+            "id": "8"
+        },
+        {
+            "q": "How do I check if I have a heater core leak?",
+            "a": "If you smell antifreeze inside the car or if it's squirting out from under the dashboard and burning passengers, you have a leak at the heater core.",
+            "id": "9"
+        }
+    ]
+}

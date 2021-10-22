@@ -1,0 +1,247 @@
+{
+    "name": "lcd_problem",
+    "category": "laptops",
+    "problem_description": "You are facing problem with your laptop's LCD display.",
+    "nodes": {
+        "1": {
+            "label": "live BIOS splash screen?",
+            "terminal": false,
+            "utterance": "Do you get the live BIOS splash screen just after you start your computer?"
+        },
+        "2": {
+            "label": "live on external display?",
+            "terminal": false,
+            "utterance": "Do you see the splash screen if you connect your laptop to an external working monitor?"
+        },
+        "3": {
+            "label": "fan or hard drive sound",
+            "terminal": false,
+            "utterance": "Can you hear the fan or other mechanical noise from the laptop?"
+        },
+        "4": {
+            "label": "proceed to laptop power failure",
+            "terminal": true,
+            "utterance": "I have narrowed down your problem. Your laptop's screen is not working because there is a power failure in your laptop."
+        },
+        "5": {
+            "label": "Confirm toggled to good external monitor. No display on either laptop screen or external monitor indicates board level failure",
+            "terminal": true,
+            "utterance": "The video processor of your laptop is malfunctioning which is why you are unable to see anything on your screen. Make sure it is firmly connected to the motherboard or replace it."
+        },
+        "6": {
+            "label": "live desktop in OS?",
+            "terminal": false,
+            "utterance": "Does your Windows boot and display the desktop?"
+        },
+        "7": {
+            "label": "boots w/o display?",
+            "terminal": false,
+            "utterance": "Does your Windows boot without displaying anything on the LCD?"
+        },
+        "8": {
+            "label": "toggle failure or video driver, try safe mode",
+            "terminal": true,
+            "utterance": "It seems like your laptop is trying to display on a external monitor that isn't connected. Toggle display to your laptop's LCD to fix your problem."
+        },
+        "9": {
+            "label": "Proceed to hard drive failure",
+            "terminal": true,
+            "utterance": "You don't see anything on your LCD because your operating system is not booting. This is because your hard drive is either malfunctioning or corrupted."
+        },
+        "10": {
+            "label": "dim desktop image?",
+            "terminal": false,
+            "utterance": "Is the display very dim and barely visible?"
+        },
+        "11": {
+            "label": "test inverter OK?",
+            "terminal": false,
+            "utterance": "Is your LCD's inverter working properly?"
+        },
+        "12": {
+            "label": "replace backlight (delicate job)",
+            "terminal": true,
+            "utterance": "You will have to get your LCD's backlight replaced to fix the problem with your display."
+        },
+        "13": {
+            "label": "replace inverter when input live, output dead",
+            "terminal": true,
+            "utterance": "The root of your problem is a malfunctioning LCD inverter. Replacing it should resolve the issue with your display."
+        },
+        "14": {
+            "label": "thin lines or tiny spots?",
+            "terminal": false,
+            "utterance": "Do you see tiny dots or lines through the LCD display?"
+        },
+        "15": {
+            "label": "when tiny spots or screen length lines are always present, LCD is failing (or dirty)",
+            "terminal": true,
+            "utterance": "It appears that your LCD has faulty ribbon lines or faulty liquid crystals. You will have to be replace it to fix this problem."
+        },
+        "16": {
+            "label": "image upside-down sideways?",
+            "terminal": false,
+            "utterance": "Is your laptop display rotated 90 degrees or upside-down?"
+        },
+        "17": {
+            "label": "ctrl-alt + up-arrow or side-arrow or check video properties",
+            "terminal": true,
+            "utterance": "This is not an hardware problem. Simply press CTRL+ALT and the appropriate arrow key to flip your display back to the normal orientation."
+        },
+        "18": {
+            "label": "red, orange tint, uneven?",
+            "terminal": false,
+            "utterance": "Does the LCD display have a tinted screen or uneven illumitation?"
+        },
+        "19": {
+            "label": "redo connections fix?",
+            "terminal": false,
+            "utterance": "Does the problem go away after redoing the display connections in your laptop?"
+        },
+        "20": {
+            "label": "inspect wires in hinge for physical failure. LCD or board level connector failure",
+            "terminal": true,
+            "utterance": "Your LCD is malfunctioning because of a board level video failure. You have to replace your laptop's diplay to fix the issue."
+        },
+        "21": {
+            "label": "lucky",
+            "terminal": true,
+            "utterance": "Your laptop display connectors are loose. This is causing the display to be blank. Make sure your display connections are all secured tightly in place."
+        },
+        "22": {
+            "label": "display scrambles w/ time?",
+            "terminal": false,
+            "utterance": "Does the laptop's LCD image get scrambled over time, like showing bits of overlayed images?"
+        },
+        "23": {
+            "label": "usually indicates the CCFL backlight is failing. A tough job on some laptops due to geometry",
+            "terminal": true,
+            "utterance": "Your CCFL backlight is failing. You need to replace the CCFL tubes or the LCD panel itself to fix this problem."
+        },
+        "24": {
+            "label": "classic video processor overheating or memory failure. Check heatshinks, thermal compound.",
+            "terminal": true,
+            "utterance": "This is a sign of an overheating video processor. Replace the thermal compound on the video processor and turn off the harware acceleration option in display settings."
+        },
+        "25": {
+            "label": "Stain or growing plume?",
+            "terminal": false,
+            "utterance": "Is a blotch or stain growing on your LCD?"
+        },
+        "26": {
+            "label": "LCD rupture, liquid crystal leak, replace LCD",
+            "terminal": true,
+            "utterance": "The liquid part of 'Liquid Crystal' is leaking out. The only solution is to replace your LCD."
+        },
+        "27": {
+            "label": "total blackouts at random?",
+            "terminal": false,
+            "utterance": "Does the LCD diaply blackout at random?"
+        },
+        "28": {
+            "label": "check video driver settings, hardware acceleration etc",
+            "terminal": true,
+            "utterance": "Go to your display settings and switch to the highest resolution avaliable. Also turn on hardware acceleration option. This should resolve your problem."
+        },
+        "29": {
+            "label": "if entering hibernation, check lid switch. Going to sleep, check power save settings, screensaver.",
+            "terminal": true,
+            "utterance": "You have broken wires or loose connectors in your display lid. This is causing your display to malfunction."
+        }
+    },
+    "edges": {
+        "1": {
+            "no": "2",
+            "yes": "6"
+        },
+        "2": {
+            "no": "3",
+            "yes": "10"
+        },
+        "3": {
+            "no": "4",
+            "yes": "5"
+        },
+        "6": {
+            "no": "7",
+            "yes": "14"
+        },
+        "7": {
+            "no": "9",
+            "yes": "8"
+        },
+        "10": {
+            "no": "19",
+            "yes": "11"
+        },
+        "11": {
+            "no": "13",
+            "yes": "12"
+        },
+        "14": {
+            "no": "16",
+            "yes": "15"
+        },
+        "16": {
+            "no": "18",
+            "yes": "17"
+        },
+        "18": {
+            "no": "22",
+            "yes": "23"
+        },
+        "19": {
+            "no": "20",
+            "yes": "21"
+        },
+        "22": {
+            "no": "25",
+            "yes": "24"
+        },
+        "25": {
+            "no": "27",
+            "yes": "26"
+        },
+        "27": {
+            "no": "28",
+            "yes": "29"
+        }
+    },
+    "supporting_faqs": [
+        {
+            "q": "What is the live BIOS splash screen?",
+            "a": "The first screen that appears on most laptops is the manufacturer BIOS splash screen or the comopany logo, which stays for a few seconds before going blank Windows starts to boot.",
+            "id": "0"
+        },
+        {
+            "q": "How to boot in Safe Mode?",
+            "a": "Use the Function key F5 or F8 when booting to access Safe Mode.",
+            "id": "1"
+        },
+        {
+            "q": "How to check laptop LCD's inverter?",
+            "a": "Turn off your laptop and unscrew your LCD display. Use a multimeter on DC mode to measure the voltage on the interter board. If the meter reads zero volts, then the inverter is not working.",
+            "id": "2"
+        },
+        {
+            "q": "What is a multimeter?",
+            "a": "Multimeter is an electronic measuring instrument used to measure voltage, current and resistance in an electronic circuit or equipment.",
+            "id": "3"
+        },
+        {
+            "q": "What is a backlight and why is it necessary?",
+            "a": "Backlights are used to illuminate a display from the side or back of the display panel. LCDs do not produce light by themselves, unlike CRT displays. They need illumination to produce a visible image which is why backlights are used.",
+            "id": "4"
+        },
+        {
+            "q": "what does a blotch on the LCD screen mean?",
+            "a": "A blotch on an LCD screen would be some dead pixels. It can also be a small area on screen with distorted colors, as if it has spilled water.",
+            "id": "5"
+        },
+        {
+            "q": "why would the liquid part of an LCD leak?",
+            "a": "LCD screens have very small amount of liquid which can possibly leak through cracks in the screen. The liquid is hazardous so it is advisable to replace the LCD.",
+            "id": "6"
+        }
+    ]
+}

@@ -1,0 +1,267 @@
+{
+    "name": "power",
+    "category": "laptops",
+    "problem_description": "your laptop won't turn ON when you press the power button.",
+    "nodes": {
+        "1": {
+            "label": "Laptop power LED on?",
+            "terminal": false,
+            "utterance": "Your laptop has a power LED, which should turn ON when an external power supply is connected. When you plug in the power supply, does the power LED turn ON?"
+        },
+        "2": {
+            "label": "LED winks if wiggling cord?",
+            "terminal": false,
+            "utterance": "When the power supply is connected to the laptop, does the power LED flicker?"
+        },
+        "3": {
+            "label": "Beeps multiple times?",
+            "terminal": false,
+            "utterance": "When you turn ON the laptop, do you hear a series of beeps?"
+        },
+        "4": {
+            "label": "Check web for your BIOS beep codes. Normally requires board level repair.",
+            "terminal": true,
+            "utterance": "Your laptop has detected a failure. For more details about the failure, refer to the \"Beep Codes\" section in your laptop's manual."
+        },
+        "5": {
+            "label": "Boots if all devices unplugged?",
+            "terminal": false,
+            "utterance": "Does your laptop boot when all external devices are disconnected?"
+        },
+        "6": {
+            "label": "Determine which connection is causing the problem by reconnecting device one at a time, and if the failure is a USB device, try on a different USB port before chuncking.",
+            "terminal": true,
+            "utterance": "One of your connected external device is preventing your laptop from turning on. You can identify the malfunctioning device by reconnecting your external devices one at a time and turning on your laptop."
+        },
+        "7": {
+            "label": "Hear fan or hard drive?",
+            "terminal": false,
+            "utterance": "Can you hear the CPU fan or the hard drive spin?"
+        },
+        "8": {
+            "label": "Proceed to display failure",
+            "terminal": true,
+            "utterance": "I have narrowed down your problem. Your laptop's LCD display is malfunctioning. Please use an external monitor, until you get the display fixed."
+        },
+        "9": {
+            "label": "Shows momentary life?",
+            "terminal": false,
+            "utterance": "When you turn on the laptop, does it show \"momentary signs of life\" before dying?"
+        },
+        "10": {
+            "label": "Feel action on switch?",
+            "terminal": false,
+            "utterance": "Does your power button click when you press it down?"
+        },
+        "11": {
+            "label": "Power switch failure",
+            "terminal": true,
+            "utterance": "Your power button is broken. Replacing the power button will fix your problem."
+        },
+        "12": {
+            "label": "Redo internal connections",
+            "terminal": true,
+            "utterance": "You have some loose connections in your laptop. Find an illustrated guide that details how to open your laptop, remake the connections and put it back together. This should fix your problem."
+        },
+        "13": {
+            "label": "Go to power up with battery removed.",
+            "terminal": true,
+            "utterance": "You have a mother board failure. Please get your mother board repaired."
+        },
+        "14": {
+            "label": "Internal power jack loose",
+            "terminal": false,
+            "utterance": "Is the DC power jack in the laptop loose or broken?"
+        },
+        "15": {
+            "label": "Replace AC output cord",
+            "terminal": true,
+            "utterance": "Please replace the AC output cord. Once you replace it, you should be able to turn on your laptop."
+        },
+        "16": {
+            "label": "Replace internal jack",
+            "terminal": true,
+            "utterance": "You have a DC power jack failure in your laptop. Please get it replaced."
+        },
+        "17": {
+            "label": "DC voltage good at output?",
+            "terminal": false,
+            "utterance": "Does the AC/DC power adapter output measure up to the rated volatge?"
+        },
+        "18": {
+            "label": "DC connector loose in the laptop?",
+            "terminal": false,
+            "utterance": "When you connect the charger to your laptop, is the power connector loose?"
+        },
+        "19": {
+            "label": "Power up with battery removed",
+            "terminal": false,
+            "utterance": "Does the laptop power up without the battery in it?"
+        },
+        "20": {
+            "label": "Reseat battery. replace if it causes failure.",
+            "terminal": true,
+            "utterance": "You either have a damaged battery or there is a problem with the connector in the battery compartment. If your battery is damaged, please replace it."
+        },
+        "21": {
+            "label": "power up stripped down",
+            "terminal": false,
+            "utterance": "Does the laptop power up without the video card, sound card and hard disk connected?"
+        },
+        "22": {
+            "label": "Reinstall or reconnect internal drives and connectors one at a time until bad subsystem is identified",
+            "terminal": true,
+            "utterance": "Reconnect one internal device at a time to the laptop until the failed device is identified. Replacing the bad internal device should fix your problem."
+        },
+        "23": {
+            "label": "board level failure",
+            "terminal": true,
+            "utterance": "You have a mother board failure. Please get your mother board repaired."
+        },
+        "24": {
+            "label": "solder on new connector",
+            "terminal": true,
+            "utterance": "The power connector inside your laptop is malfunctioning. Please get it replaced."
+        },
+        "25": {
+            "label": "Live AC power source?",
+            "terminal": false,
+            "utterance": "Is the AC power outlet, to which the laptop power cord is connected, working?"
+        },
+        "26": {
+            "label": "DC voltage with connector cut off",
+            "terminal": false,
+            "utterance": "Cut off the connector at the end of the charger and measure the voltage across the exposed ends. Does the voltmeter measure the rated voltage printed on the adapter?"
+        },
+        "27": {
+            "label": "solder on new connector",
+            "terminal": true,
+            "utterance": "The connector at end of the charger has failed. Please solder a new one to fix your problem."
+        },
+        "28": {
+            "label": "Replace AC adapter brick",
+            "terminal": true,
+            "utterance": "Looks like your AC adapter is not working. It's time to buy a new one."
+        },
+        "29": {
+            "label": "Plug directly to a good outlet.",
+            "terminal": true,
+            "utterance": "The power outlet you are connected to isn't working. Please use one that works. This should solve your problem."
+        }
+    },
+    "edges": {
+        "1": {
+            "no": "17",
+            "yes": "2"
+        },
+        "2": {
+            "no": "3",
+            "yes": "14"
+        },
+        "3": {
+            "no": "5",
+            "yes": "4"
+        },
+        "5": {
+            "no": "7",
+            "yes": "6"
+        },
+        "7": {
+            "no": "9",
+            "yes": "8"
+        },
+        "9": {
+            "no": "10",
+            "yes": "13"
+        },
+        "10": {
+            "no": "11",
+            "yes": "12"
+        },
+        "14": {
+            "no": "15",
+            "yes": "16"
+        },
+        "17": {
+            "no": "25",
+            "yes": "18"
+        },
+        "18": {
+            "no": "19",
+            "yes": "24"
+        },
+        "19": {
+            "no": "21",
+            "yes": "20"
+        },
+        "21": {
+            "no": "23",
+            "yes": "22"
+        },
+        "25": {
+            "no": "29",
+            "yes": "26"
+        },
+        "26": {
+            "no": "28",
+            "yes": "27"
+        }
+    },
+    "supporting_faqs": [
+        {
+            "q": "Why does the power LED in my laptop flicker?",
+            "a": "The power LED in laptops flicker when the power supply is too intermittent to charge the battery.",
+            "id": "0"
+        },
+        {
+            "q": "What is \"a series of beeps\" made by the laptop?",
+            "a": "Laptops go through a Power On Self Test (POST) when turned on. If the POST carried out by the laptop detects a failure, it will report the failure through a series of beeps.",
+            "id": "1"
+        },
+        {
+            "q": "What are external devices connected to the laptop?",
+            "a": "Any devices such as a printer, a network connection, a PCMCIA card, video monitor, or even a pen drive or USB mouse connected to your laptop are referred to as external devices.",
+            "id": "2"
+        },
+        {
+            "q": "Why is an external device preventing my laptop from powering ON?",
+            "a": "This may occur due to a short circuit or electrical problem in the external device. It can also be a problem with the port in the laptop to which the device is connected to.",
+            "id": "3"
+        },
+        {
+            "q": "What does \"momentary signs of life\" mean?",
+            "a": "Do you see any indications of the laptop trying to power up. For example,  LEDs blinking, a fan spinning, any change in the display brightness or the hard drive spining up.",
+            "id": "4"
+        },
+        {
+            "q": "Why does the DC power jack in the laptop get loose?",
+            "a": "The most common reason for mechanical failure of the power jack is unintentional abuse: pulling out the connector at an angle when disconnecting the power, dropping the laptop with adapter attached or stepping on the cord.",
+            "id": "5"
+        },
+        {
+            "q": "How do I replace the DC power jack in the laptop?",
+            "a": "You need to desolder the old power jack from the mother board and solder a new one in.",
+            "id": "6"
+        },
+        {
+            "q": "How do I measure the laptop power adapter's voltage?",
+            "a": "The ratings for the DC output are printed on the AC/DC power adapter. Set the multimeter to DC mode and measure the voltage. The measured voltage should match the one printed on the adapter.",
+            "id": "7"
+        },
+        {
+            "q": "How do I know if my laptop battery is damaged?",
+            "a": "Visually inspect the battery for damage. The battery is damaged if it shows any signs of bulging, leaking or melting.",
+            "id": "8"
+        },
+        {
+            "q": "How do I know if the connector in the battery compartment has a problem?",
+            "a": "Inspect the battery connector on the battery and in the battery compartment. Check for signs of discoloration, misalignment, melted plastic on or near the pins.",
+            "id": "9"
+        },
+        {
+            "q": "How do I check if an AC power outlet is working?",
+            "a": "You can check it by plugging in a lamp to the AC power outlet. If the lamp lights up, the outlet is working fine.",
+            "id": "10"
+        }
+    ]
+}

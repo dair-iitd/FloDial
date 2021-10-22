@@ -1,0 +1,305 @@
+{
+    "name": "car_wont_start",
+    "category": "cars",
+    "problem_description": "You are unable to start your car.",
+    "nodes": {
+        "1": {
+            "label": "starter cranks?",
+            "terminal": false,
+            "utterance": "When you turn the key, does the starter crank?"
+        },
+        "2": {
+            "label": "starter spins?",
+            "terminal": false,
+            "utterance": "Does the starter spin on turning ON the car?"
+        },
+        "3": {
+            "label": "Battery read over 12V?",
+            "terminal": false,
+            "utterance": "Does the car battery reads more than 12 Volts?"
+        },
+        "4": {
+            "label": "Jump start or pop start car and check if battery is charging.",
+            "terminal": true,
+            "utterance": "Your battery is discharged. Please jump start or pop start your car. This should fix the problem"
+        },
+        "5": {
+            "label": "Cleaned terminal?",
+            "terminal": false,
+            "utterance": "Are the battery terminals dirty?"
+        },
+        "6": {
+            "label": "Clean battery terminals and connectors, engine ground.",
+            "terminal": true,
+            "utterance": "The issue is that your battery terminals are oxidised. Please clean car battery terminals, connectors and engine ground. Your car should start once you clean them."
+        },
+        "7": {
+            "label": "With the car in park or neutral, use heavy jumper or screwdriver to bypass starter relay solenoid. Test starter.",
+            "terminal": true,
+            "utterance": "Your car's starter relay has failed. Use a heavy jumper or screwdriver to bypass the starter relay solenoid. This should start your car."
+        },
+        "8": {
+            "label": "Solenoid stuck, not powered. Missing teeth on the flywheel.",
+            "terminal": true,
+            "utterance": "The issue could be that the starter solenoid is stuck or there are missing teeth on the flywheel."
+        },
+        "9": {
+            "label": "Engine fires?",
+            "terminal": false,
+            "utterance": "Does the engine fire on turning the key?"
+        },
+        "10": {
+            "label": "Spark to plugs?",
+            "terminal": false,
+            "utterance": "Is spark getting to the plugs?"
+        },
+        "11": {
+            "label": "Spark from coil?",
+            "terminal": false,
+            "utterance": "Is there a spark from the ignition coil?"
+        },
+        "12": {
+            "label": "12V+ at coil primary?",
+            "terminal": false,
+            "utterance": "Is there a 12 volt+ reading at the primary coil?"
+        },
+        "13": {
+            "label": "Test coil for internal short. Check secondary output wire resistance.",
+            "terminal": true,
+            "utterance": "The starter primary coil has an internal short. Fixing this should help start your car."
+        },
+        "14": {
+            "label": "Ignition system wiring, voltage regulator.",
+            "terminal": true,
+            "utterance": "Your car ignition system wiring or the voltage regulator is at fault. Hope this suggestion was useful."
+        },
+        "15": {
+            "label": "Mechanical distributor?",
+            "terminal": false,
+            "utterance": "Does your car have a mechanical distributor?"
+        },
+        "16": {
+            "label": "For electronic distribution, see model manual for diagnostic checks.",
+            "terminal": true,
+            "utterance": "You have an issue with the electronic fuel distribution. Please see model manual for diagnostic checks."
+        },
+        "17": {
+            "label": "Check distributor cap for damage.",
+            "terminal": true,
+            "utterance": "The problem is with the distributor cap. Please check for erosion or excess build up."
+        },
+        "18": {
+            "label": "Fuel to filter?",
+            "terminal": false,
+            "utterance": "Is fuel getting to the last fuel filter in line?"
+        },
+        "19": {
+            "label": "Vapor lock, fuel pump, blockage.",
+            "terminal": true,
+            "utterance": "We have narrowed down your problem. You either have a fuel pump failure or there is a blockage in the fuel line."
+        },
+        "20": {
+            "label": "Fuel injected?",
+            "terminal": false,
+            "utterance": "Does your car have electronic fuel injection?"
+        },
+        "21": {
+            "label": "Try starter spray in carb, throttle open.",
+            "terminal": true,
+            "utterance": "You have a carburateur problem."
+        },
+        "22": {
+            "label": "Single point, check throttle body. Electronic multi-point, separate diagnostic.",
+            "terminal": true,
+            "utterance": "You have a fuel injector problem. Please see the manual specific to the car model for more details ."
+        },
+        "23": {
+            "label": "Starts and stalls?",
+            "terminal": false,
+            "utterance": "Does the car start, run a few seconds (or longer) and then stall?"
+        },
+        "24": {
+            "label": "Ignition timing, fuel problem, cranking too slow - battery, starter.",
+            "terminal": true,
+            "utterance": "Either there is an issue with the spark control system or your starter motor needs rebuilding. I hope this helped you narrow down the issue."
+        },
+        "25": {
+            "label": "Check blink code?",
+            "terminal": false,
+            "utterance": "Did the blink code indicate the engine is OK?"
+        },
+        "26": {
+            "label": "check for blink code access.",
+            "terminal": true,
+            "utterance": "Please check the blink code manual. The manual will help you determine the root cause of the problem."
+        },
+        "27": {
+            "label": "Stalls on key release to run?",
+            "terminal": false,
+            "utterance": "Does the engine fire right up but stall as soon as you release the key back to the RUN position?"
+        },
+        "28": {
+            "label": "Stalls in rain?",
+            "terminal": false,
+            "utterance": "Does the car stall in rain?"
+        },
+        "29": {
+            "label": "Stalls warm?",
+            "terminal": false,
+            "utterance": "Does the car stall while warm?"
+        },
+        "30": {
+            "label": "On cold stalling, check for stuck choker, EGR, Check for a vacuum leak.",
+            "terminal": true,
+            "utterance": "As your car stalls cold, please check for a stuck choke. This may be letting too much fresh air into the intake manifold and this is why you are experiencing starting problem. Is there anything else I can help with?"
+        },
+        "31": {
+            "label": "Adjust idle car, blow out the fuel filter, check fuel pump output. Check vacuum leak or sensor failure.",
+            "terminal": true,
+            "utterance": "One of the sensors in the engine's electronic control system is malfunctioning. Hope this information helps."
+        },
+        "32": {
+            "label": "Check for cracked coil, distributor. Check visible electrical arcing running in dark.",
+            "terminal": true,
+            "utterance": "You either have a cracked coil or a cracked distributor in the car. Please get it checked."
+        },
+        "33": {
+            "label": "Ignition RUN circuit or column key switch failure. Ring out with meter.",
+            "terminal": true,
+            "utterance": "Your car's ignition switch is not working. Please replace it and your car should be able to start now."
+        }
+    },
+    "edges": {
+        "1": {
+            "no": "2",
+            "yes": "9"
+        },
+        "2": {
+            "no": "3",
+            "yes": "8"
+        },
+        "3": {
+            "no": "4",
+            "yes": "5"
+        },
+        "5": {
+            "no": "6",
+            "yes": "7"
+        },
+        "9": {
+            "no": "10",
+            "yes": "23"
+        },
+        "10": {
+            "no": "11",
+            "yes": "18"
+        },
+        "11": {
+            "no": "12",
+            "yes": "15"
+        },
+        "12": {
+            "no": "14",
+            "yes": "13"
+        },
+        "15": {
+            "no": "16",
+            "yes": "17"
+        },
+        "18": {
+            "no": "19",
+            "yes": "20"
+        },
+        "20": {
+            "no": "21",
+            "yes": "22"
+        },
+        "23": {
+            "no": "24",
+            "yes": "25"
+        },
+        "25": {
+            "no": "27",
+            "yes": "26"
+        },
+        "27": {
+            "no": "28",
+            "yes": "33"
+        },
+        "28": {
+            "no": "29",
+            "yes": "32"
+        },
+        "29": {
+            "no": "30",
+            "yes": "31"
+        }
+    },
+    "supporting_faqs": [
+        {
+            "q": "How to measure the car battery voltage?",
+            "a": "Using voltmeter",
+            "id": "0"
+        },
+        {
+            "q": "How to use voltmeter to measure the battery voltage?",
+            "a": "To take a measurement, you have to touch the negative probe of voltmeter with battery's negative terminal. Both will be black in color. You also have to connect the positive probe of voltmeter with battery's positive terminal. Both should be red in color. To take a reading, you have to provide a light load to the battery which you can do by turning on the headlights. Check if the voltmeter reading is above 12V.",
+            "id": "1"
+        },
+        {
+            "q": "How to jump start a car?",
+            "a": "Connect jumper cables from working battery in another car to your car battery. Start the other car and let it's engine run for 5 minutes. Now try starting your car.",
+            "id": "2"
+        },
+        {
+            "q": "how to clean the battery terminals, connectors and engine ground?",
+            "a": "Remove the connectors, clean the terminals and the connectors with some sandpaper or emory cloth. Repeat the same for the engine ground.",
+            "id": "3"
+        },
+        {
+            "q": "Is there a temporary quick solution when the starter solenoid is stuck?",
+            "a": "If the solenoid is stuck, you can try hitting the starter case with a hammer on the casting.",
+            "id": "4"
+        },
+        {
+            "q": "How to check if the spark is getting to the plug?",
+            "a": "Pull a spark plug wire, stick a screwdriver into the metal clip while having somebody crank it over. You should be able to see a bright spark.",
+            "id": "5"
+        },
+        {
+            "q": "Where is the ignition coil located?",
+            "a": "It is usually located above the spark plug.",
+            "id": "6"
+        },
+        {
+            "q": "How to identify a mechanical distributor?",
+            "a": "A mechanical distributor is easily identified by a round distributor cap with all the spark plug wires attached to towers spaced along the edge",
+            "id": "7"
+        },
+        {
+            "q": "How to check if fuel is getting to the last fuel filter?",
+            "a": "Remove the filter and check if there is any fuel in it.",
+            "id": "8"
+        },
+        {
+            "q": "Where is the last fuel filter?",
+            "a": "The last fuel filter is close to the fuel injection unit.",
+            "id": "9"
+        },
+        {
+            "q": "Is there a quick fix for the carburateur problem?",
+            "a": "Try spraying engine starter fluid down the carburateur and it may fire up.",
+            "id": "10"
+        },
+        {
+            "q": "How does one view the blink code?",
+            "a": "Turn the key to RUN and OFF a couple times in quick succession. The check engine light will blink with a series of flashes. The flash count indicates the blink code.",
+            "id": "11"
+        },
+        {
+            "q": "What is the blink code for a perfectly working engine?",
+            "a": "If the check engine light stays ON without blinking, then the engine is working as expected",
+            "id": "12"
+        }
+    ]
+}

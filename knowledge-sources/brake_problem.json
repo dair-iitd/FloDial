@@ -1,0 +1,313 @@
+{
+    "name": "brake_problem",
+    "category": "cars",
+    "problem_description": "You are experiencing some braking problem with your car.",
+    "nodes": {
+        "1": {
+            "label": "brakes stop the car?",
+            "terminal": false,
+            "utterance": "Does the car stop when you apply the brakes?"
+        },
+        "2": {
+            "label": "pedal to floor?",
+            "terminal": false,
+            "utterance": "Does the brake pedal go all the way to the floor?"
+        },
+        "3": {
+            "label": "brake fluid level ok?",
+            "terminal": false,
+            "utterance": "Is the brake fluid level OK?"
+        },
+        "4": {
+            "label": "fill to line, if brakes soft, bleed lines following service manual",
+            "terminal": true,
+            "utterance": "Fill up the brake fluid in both reservoirs of the master cylinder to the fill line, and poke the rubber seal on the lid back into shape so the reservoir doesn't overflow. Bleed the brakes by following the service manual. This should solve the braking problem."
+        },
+        "5": {
+            "label": "brake warning light?",
+            "terminal": false,
+            "utterance": "Is the brake warning light ON in the dashboard?"
+        },
+        "6": {
+            "label": "if parking brake released see service manual for power booster problem or anti-lock failure",
+            "terminal": true,
+            "utterance": "You are facing anti-lock braking system failure. See the service manual for instructions to fix the issue."
+        },
+        "7": {
+            "label": "likely power assist related, see service manual",
+            "terminal": true,
+            "utterance": "You have a problem in the master cylinder or power booster. See the service manual for appropriate instructions."
+        },
+        "8": {
+            "label": "pedal linkage binding, glazed, frozen calipers, pinched lines, booster failure",
+            "terminal": true,
+            "utterance": "The issue is with the pedal. Either there is something jammed under the pedal or its a pedal linkage binding."
+        },
+        "9": {
+            "label": "parking brake failure?",
+            "terminal": false,
+            "utterance": "Is the emergency parking brake working properly?"
+        },
+        "10": {
+            "label": "wheels drag too much?",
+            "terminal": false,
+            "utterance": "Does one or more wheels drag too much?"
+        },
+        "11": {
+            "label": "stuck piston, hydraulic lock, over adjusted drum shoes, warped rotor",
+            "terminal": true,
+            "utterance": "The issue is clear to me now. You have a stuck piston in your disc brakes or the drum shoes are over-adjusted in your drum brakes."
+        },
+        "12": {
+            "label": "rear wheel locked?",
+            "terminal": false,
+            "utterance": "Is a rear wheel gettig locked and leaving a drag mark?"
+        },
+        "13": {
+            "label": "spring return failure or cable rusted, bound",
+            "terminal": true,
+            "utterance": "The issue is that your emergency brake cable is rusted or the return spring is malfunctioning."
+        },
+        "14": {
+            "label": "ratchets without force?",
+            "terminal": false,
+            "utterance": "Does the parking brake ratchets (or moves) without force?"
+        },
+        "15": {
+            "label": "cable stretched or broken, frozen adjuster",
+            "terminal": true,
+            "utterance": "The parking brake has a cable problem. It's either badly stretched or broken. Please get a replacement and install it."
+        },
+        "16": {
+            "label": "shoes worn out or glazed, fluid in drums",
+            "terminal": true,
+            "utterance": "I have narrowed down your problem. Either the brake shoes are worn out or there is a fluid leak in the drums."
+        },
+        "17": {
+            "label": "need to pump up brakes?",
+            "terminal": false,
+            "utterance": "Do you need to pump the brake pedal several times before it firms up?"
+        },
+        "18": {
+            "label": "making noises?",
+            "terminal": false,
+            "utterance": "Are there any noises when you brake?"
+        },
+        "19": {
+            "label": "squealing?",
+            "terminal": false,
+            "utterance": "Are the brakes making squealing noise when you apply them?"
+        },
+        "20": {
+            "label": "clunks?",
+            "terminal": false,
+            "utterance": "Do you hear clunks whenever the brakes are applied?"
+        },
+        "21": {
+            "label": "scrape or grinding?",
+            "terminal": false,
+            "utterance": "Do you hear the brakes scrape or grind?"
+        },
+        "22": {
+            "label": "broken pad or shoe facing, warning sound for excessive wear",
+            "terminal": true,
+            "utterance": "It looks like you have a broken brake pad or rust between the braking surfaces. Replacing the brake pad should fix the brake failure."
+        },
+        "23": {
+            "label": "rattles?",
+            "terminal": false,
+            "utterance": "Do you hear rattling noise from the brakes when driving on rough pavement?"
+        },
+        "24": {
+            "label": "chirps and ticks that increase with speed due to rotor warp or run out",
+            "terminal": true,
+            "utterance": "It's likely a high spot on the rotor. The only solution is to replace the rotor. Hope this helps!"
+        },
+        "25": {
+            "label": "anti-rattle clips on disc pads missing or installed wrong",
+            "terminal": true,
+            "utterance": "The issue due to missing or incorrectly installed spring clips."
+        },
+        "26": {
+            "label": "caliper bolt loose, suspension problem",
+            "terminal": true,
+            "utterance": "You have a caliper that's moving too freely on the wheel assembly, because of a loose bolt. Fix this to resolve your braking issue."
+        },
+        "27": {
+            "label": "check pads and shoes for wear, foreign objects",
+            "terminal": true,
+            "utterance": "The source of the issue is vibrating disc brake pads. You can fix this using anti-vibration clips."
+        },
+        "28": {
+            "label": "brakes pull?",
+            "terminal": false,
+            "utterance": "When you apply the brakes, does it pull the steering wheel?"
+        },
+        "29": {
+            "label": "front brake issue, stuck or cocked piston, air or crimp in line, master cylinder problem",
+            "terminal": true,
+            "utterance": "The issue seems to be a problem with the front brakes. Please check the brake parts for excessive wear."
+        },
+        "30": {
+            "label": "jerky, pulsing?",
+            "terminal": false,
+            "utterance": " When you apply the brakes, do you feel a jerky feeling through the pedal?"
+        },
+        "31": {
+            "label": "hard braking?",
+            "terminal": false,
+            "utterance": "Is it hard to brake and bring the car to a halt?"
+        },
+        "32": {
+            "label": "If brake warning light on and parking brake is released, see service manual for codes",
+            "terminal": true,
+            "utterance": "You have a failed emergency brake switch that is causing the brake warning light. Check the car's manual for instructions to fix this."
+        },
+        "33": {
+            "label": "worn pads, shoes, bound piston, power boost problem",
+            "terminal": true,
+            "utterance": "Please replace the worn brake system parts to fix the brake issue."
+        },
+        "34": {
+            "label": "anti-lock brake issue, deformed drum or rotor (test with parking brake)",
+            "terminal": true,
+            "utterance": "Looks like your anti-lock braking system is malfunctioning. Please get it checked."
+        },
+        "35": {
+            "label": "only after turning?",
+            "terminal": false,
+            "utterance": "Do you need to pump up the brakes only after taking a turn?"
+        },
+        "36": {
+            "label": "air in system, fluid leak",
+            "terminal": true,
+            "utterance": "You have air in your brake line system. Bleed the brakes using the instructions in your service manual to fix your braking problem."
+        },
+        "37": {
+            "label": "front wheel bearings worn, axle nut loose, wheel lugs loose",
+            "terminal": true,
+            "utterance": "The front wheel bearing is worn out. Please replace them to fix the brake failure."
+        }
+    },
+    "edges": {
+        "1": {
+            "no": "2",
+            "yes": "9"
+        },
+        "2": {
+            "no": "8",
+            "yes": "3"
+        },
+        "3": {
+            "no": "4",
+            "yes": "5"
+        },
+        "5": {
+            "no": "7",
+            "yes": "6"
+        },
+        "9": {
+            "no": "10",
+            "yes": "12"
+        },
+        "10": {
+            "no": "17",
+            "yes": "11"
+        },
+        "12": {
+            "no": "14",
+            "yes": "13"
+        },
+        "14": {
+            "no": "16",
+            "yes": "15"
+        },
+        "17": {
+            "no": "18",
+            "yes": "35"
+        },
+        "18": {
+            "no": "28",
+            "yes": "19"
+        },
+        "19": {
+            "no": "20",
+            "yes": "27"
+        },
+        "20": {
+            "no": "21",
+            "yes": "26"
+        },
+        "21": {
+            "no": "23",
+            "yes": "22"
+        },
+        "23": {
+            "no": "24",
+            "yes": "25"
+        },
+        "28": {
+            "no": "30",
+            "yes": "29"
+        },
+        "30": {
+            "no": "31",
+            "yes": "34"
+        },
+        "31": {
+            "no": "32",
+            "yes": "33"
+        },
+        "35": {
+            "no": "36",
+            "yes": "37"
+        }
+    },
+    "supporting_faqs": [
+        {
+            "q": "What do you mean when you ask if the car stop when I apply the brakes?",
+            "a": "If you have to step on the brake pedal harder than you want to in order for the brakes to operate normally, then the brakes do stop the car.",
+            "id": "0"
+        },
+        {
+            "q": "How often should I replace brake fluid?",
+            "a": "The time to change the brake fluid depends on the car so you should refer to your car's manual. It can be anything between 2 years to never.",
+            "id": "1"
+        },
+        {
+            "q": "How do I check the brake fluid level?",
+            "a": "Open the cap of the brake fluid reservoir and see if the fluid is within half an inch from the cap.",
+            "id": "2"
+        },
+        {
+            "q": "What does bleeding the brakes mean?",
+            "a": "Bleeding the brakes mean getting rid of any air that might have made it's way in the brake line. Doing this is important to ensure proper functioning of brakes.",
+            "id": "3"
+        },
+        {
+            "q": "What is anti-lock braking system used for in my car? Is it safe to drive with a malfunctioning ABS?",
+            "a": "ABS operates by preventing the wheels from locking up during braking, thereby maintaining tractive contact with the road surface. ABS offers improved vehicle control and decreases stopping distances on dry and some slippery surfaces. It is not advisable to drive without an ABS.",
+            "id": "4"
+        },
+        {
+            "q": "What is the power booster's role in the brake pipeline?",
+            "a": "A power booster multiplies the force applied to the brake pedal by the driver into enough force to actuate the brakes and stop a vehicle that can weigh several tons.",
+            "id": "5"
+        },
+        {
+            "q": "How do I check if my emergency parking brake is working properly?",
+            "a": "When you pull the emergency brake lever, it should stiffen up quickly, ratchet audibly and hold the car from rolling backwards on a hill in neutral.",
+            "id": "6"
+        },
+        {
+            "q": "How to check if my wheels are dragging?",
+            "a": "Put the car up on jack stands and spin each wheel to see if they are all about the same or if one wheel stands out as dragging to the point of being hard to spin, not even turning a full revolution without stopping when you give it a strong tug.",
+            "id": "7"
+        },
+        {
+            "q": "How do I release the stuck piston in the disc brake?",
+            "a": "Try loosening the bleeder screw for that wheel and see if the piston backs off.",
+            "id": "8"
+        }
+    ]
+}

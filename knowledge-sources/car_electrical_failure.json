@@ -1,0 +1,293 @@
+{
+    "name": "car_electrical_failure",
+    "category": "cars",
+    "problem_description": "There is an electrical failure in your car.",
+    "nodes": {
+        "1": {
+            "label": "Open circuit on run?",
+            "terminal": false,
+            "utterance": "Is there an open circuit with your car's key in 'run/ON' position?"
+        },
+        "2": {
+            "label": "Accessory failure?",
+            "terminal": false,
+            "utterance": "Are you facing any issue with accessories such as wipers, radio or heater blower?"
+        },
+        "3": {
+            "label": "All accessories fail?",
+            "terminal": false,
+            "utterance": "Have all the electrical accessories failed?"
+        },
+        "4": {
+            "label": "Accessory fuse first. Check accessory circuit for open.",
+            "terminal": true,
+            "utterance": "Looks like your accessory fuse is blown. Use the service manual to find the open circuit in the fuse box and fix it."
+        },
+        "5": {
+            "label": "Check power at accessory terminals. Check accessory ground mounting. Remove and test.",
+            "terminal": true,
+            "utterance": "Your accessory is not working because there is not enough voltage at it's input terminal or the device has failed."
+        },
+        "6": {
+            "label": "battery running down?",
+            "terminal": false,
+            "utterance": "Does your battery run down in just a few days?"
+        },
+        "7": {
+            "label": "alternator tested OK?",
+            "terminal": false,
+            "utterance": "Can you check if your car battery is charging properly?"
+        },
+        "8": {
+            "label": "Battery test OK?",
+            "terminal": false,
+            "utterance": "Can you please test if your battery is OK?"
+        },
+        "9": {
+            "label": "check hidden light drain, high computer draw, alar system, etc",
+            "terminal": true,
+            "utterance": "The cause of your problem is a bad drain on the battery. One of your electrical systems like hidden light, alarm system, or radio is causing the drain."
+        },
+        "10": {
+            "label": "test specific gravity, levels, if near lifespan, replace",
+            "terminal": true,
+            "utterance": "You need to buy a new battery and replace it. That will resolve your electrical problem."
+        },
+        "11": {
+            "label": "voltage regulator good?",
+            "terminal": false,
+            "utterance": "Is the voltage regulator in your car good?"
+        },
+        "12": {
+            "label": "check voltage regulator ground, replace, otherwise control",
+            "terminal": true,
+            "utterance": "The root cause of your issue is the voltage regulator failure. Replacing it will fix the issue."
+        },
+        "13": {
+            "label": "check belt, grounds, all alternator connections, voltages",
+            "terminal": true,
+            "utterance": "The issue is with the alternator isn't getting turned at high speed. To fix it, please replace its drive belt."
+        },
+        "14": {
+            "label": "single lamp failure?",
+            "terminal": false,
+            "utterance": "Do you have a single lamp failure? It could be a headlight, a taillight, or a blinker."
+        },
+        "15": {
+            "label": "replace lamp, check ground, wire direct",
+            "terminal": true,
+            "utterance": "You have a bulb failure. Replacing it will fix your problem. Make sure you clean the socket ground for any possible corrosion and seat the bulb in the socket correctly."
+        },
+        "16": {
+            "label": "blinker failure?",
+            "terminal": false,
+            "utterance": "Are you facing a blinker problem such as lamps are not blinking, or it doesnt make the characteristic sound?"
+        },
+        "17": {
+            "label": "test with emergency flasher, swap blinker relay, bulb, switch failure",
+            "terminal": true,
+            "utterance": "To fix the issue, you need to replace the blinker bulb. If changing the bulb doesn't work, then replace the turn signal flasher."
+        },
+        "18": {
+            "label": "check fuse, failure is switch or wiring for multiple lamp failure, ie, headlights, emergency flashers, brake lights",
+            "terminal": true,
+            "utterance": "The reason for multiple light failure could be a blown fuse or a wiring issue. You will have to use the service manual or go to a mechanic to get it resolved."
+        },
+        "19": {
+            "label": "Fusible link blown?",
+            "terminal": false,
+            "utterance": "Can you check if a fusible link has blown?"
+        },
+        "20": {
+            "label": "Ignition switch open?",
+            "terminal": false,
+            "utterance": "Is there a open circuit in the ignition switch?"
+        },
+        "21": {
+            "label": "Replace or bypass ignition switch",
+            "terminal": true,
+            "utterance": "The open circuit in your ignition switch is causing the electrical problem. You should get it replaced."
+        },
+        "22": {
+            "label": "battery connector good?",
+            "terminal": false,
+            "utterance": "Are the car's battery connectors clean and good?"
+        },
+        "23": {
+            "label": "Laugh, clean or replace",
+            "terminal": true,
+            "utterance": "You have no power because you battery connectors are corroded to the point that there is an insulating layer of rust. Replacing them will resolve your issue."
+        },
+        "24": {
+            "label": "open circuit",
+            "terminal": true,
+            "utterance": "It looks like the reason for your problem is an open circuit. You'll have to locate the circuit break and replace the wire or device to resolve the issue."
+        },
+        "25": {
+            "label": "short after blown link?",
+            "terminal": false,
+            "utterance": "Can you please check if you have a short circuit?"
+        },
+        "26": {
+            "label": "replace with new fusible link rate same or lower",
+            "terminal": true,
+            "utterance": "Looks like you had a temporary short circuit which blew the fuse link. You need to replace it with a new fusible link with the same or slightly lower rating."
+        },
+        "27": {
+            "label": "short circuit",
+            "terminal": true,
+            "utterance": "The short circuit is causing your fuse to blow and hence the electrical problem. Before replacing the fuse, locate the short circuit and replace the wire or device to fix your problem."
+        }
+    },
+    "edges": {
+        "1": {
+            "no": "2",
+            "yes": "19"
+        },
+        "2": {
+            "no": "6",
+            "yes": "3"
+        },
+        "3": {
+            "no": "5",
+            "yes": "4"
+        },
+        "6": {
+            "no": "14",
+            "yes": "7"
+        },
+        "7": {
+            "no": "11",
+            "yes": "8"
+        },
+        "8": {
+            "no": "10",
+            "yes": "9"
+        },
+        "11": {
+            "no": "12",
+            "yes": "13"
+        },
+        "14": {
+            "no": "16",
+            "yes": "15"
+        },
+        "16": {
+            "no": "18",
+            "yes": "17"
+        },
+        "19": {
+            "no": "20",
+            "yes": "25"
+        },
+        "20": {
+            "no": "22",
+            "yes": "21"
+        },
+        "22": {
+            "no": "23",
+            "yes": "24"
+        },
+        "25": {
+            "no": "26",
+            "yes": "27"
+        }
+    },
+    "supporting_faqs": [
+        {
+            "q": "What do you mean by key on 'run' position?",
+            "a": "When you start the car, you turn the key to the 'start' position and as soon as you relax, the key will return to the 'run' position. The 'run/ON' position turns on all of the electrical systems in the car, except for the starter circuit.",
+            "id": "0"
+        },
+        {
+            "q": "How do I check if there is an open circuit?",
+            "a": "Turn the key to the RUN position. Using a multimeter, measure the voltage at the positive terminal of the coil. You should see around 12.6 volts. If you don't see any voltage, it means there's an open circuit.",
+            "id": "1"
+        },
+        {
+            "q": "What is an accessory failure?",
+            "a": "Devices such as the windshield wipers, heater blower and radio are considered accessories. If you are facing an electrical problem with any such device then you have an accessory failure.",
+            "id": "2"
+        },
+        {
+            "q": "Why does my car battery run down so quickly?",
+            "a": "If you park a car for a few months without disconnecting the battery, it will run the battery down just based on the current draw of the clock radio, computer, and any other 'always on' devices.",
+            "id": "3"
+        },
+        {
+            "q": "What is a multimeter?",
+            "a": "A multimeter is an electronic instrument used to measure voltage, current and resistance in an electrical circuit or equipment.",
+            "id": "4"
+        },
+        {
+            "q": "How do I check if my battery is charging?",
+            "a": "To test the charging circuit, you need to test the battery state with a multimeter while the car is running. Use the voltage mode of the multimeter and connect to the battery terminals. The voltage should be well over 13V if the battery isn't fully charged.",
+            "id": "5"
+        },
+        {
+            "q": "How do I test if my battery is OK?",
+            "a": "Turn the headlights on for a half a minute, and then turn them off for a minute and check the battery voltage. If the battery voltage drops below around 12.6 volts when the battery is supposedly fully charged, it's getting old. If the battery shows around 10V and burbles away while it's charging, you have a bad cell.",
+            "id": "6"
+        },
+        {
+            "q": "What is the typical voltage of a fully charged battery?",
+            "a": "A fully charged battery typically has a voltage of around 12.6V or more.",
+            "id": "7"
+        },
+        {
+            "q": "What is the specific gravity test?",
+            "a": "The specific gravity tester is just a little syringe with different density plastic balls inside in a row. You suck a little battery acid into the syringe, and refer to the chart that tells you the battery condition based on how many balls float.",
+            "id": "8"
+        },
+        {
+            "q": "What is a voltage regulator?",
+            "a": "The voltage regulator controls the amount of current flowing to the alternator which is used to charge the battery. In order to prevent the battery from being overcharged and overheated, the voltage regulator monitors the circuit and limits the current flow to a safe level.",
+            "id": "9"
+        },
+        {
+            "q": "I have no clue how to check if the voltage regulator is good. How do I do it?",
+            "a": "Set a multimeter to measure voltage and connect it to your battery terminals. Put your car in park and then start and rev it. As you rev, the multimeter reading should go up to a maximum of 14.5V. If the reading goes over, then your voltage regulator is busted.",
+            "id": "10"
+        },
+        {
+            "q": "What is an alternator?",
+            "a": "An alternator is generator that charges the car battery and powers the electrical systems when the car is running.",
+            "id": "11"
+        },
+        {
+            "q": "What is a fusible link?",
+            "a": "Fusible links are the fail-safe, the last line of electrical system defense in cars. If there's a short circuit that doesn't pop a fuse box fuse, the fusible link will melt and open the circuit.",
+            "id": "12"
+        },
+        {
+            "q": "How or where to check for the fusible link?",
+            "a": "You can visually identify a blown fusible link by melted wire insulation on one of the wires between the positive battery terminal and the ignition switch. Please check and let me know if you see a blown fuse?",
+            "id": "13"
+        },
+        {
+            "q": "What is an ignition switch?",
+            "a": "The ignition switch activates electrical systems in the car so that it can start. It's located just behind the slot where you insert the key.",
+            "id": "14"
+        },
+        {
+            "q": "How do I check if my ignition switch has an open circuit?",
+            "a": "Use a multimeter and set it to resistance measurement. Connect it's wire on both side of the switch. When you turn the key, you should hear a tone or see some reading in the multimeter in case of a closed circuit. Otherwise its an open circuit.",
+            "id": "15"
+        },
+        {
+            "q": "What is a short circuit?",
+            "a": "A short circuit is a circuit with an unexpected path to ground, meaning the electricity will return to ground without powering whatever device the circuit is intended to power.",
+            "id": "16"
+        },
+        {
+            "q": "How do I check if my car has a short circuit?",
+            "a": "You will need a multimeter and set it to resistance measurement. To test for a short circuit, check for continuity, or low resistance, with your meter between ground and the supply line.",
+            "id": "17"
+        },
+        {
+            "q": "What are the reasons for a temporary short circuit?",
+            "a": "Temporary short circuit can happen if you had been working on the car without disconnecting the battery ground.",
+            "id": "18"
+        }
+    ]
+}

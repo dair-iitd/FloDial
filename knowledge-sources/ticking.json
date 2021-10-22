@@ -1,0 +1,213 @@
+{
+    "name": "ticking",
+    "category": "cars",
+    "problem_description": "You are concerned that your car is making unusual noises.",
+    "nodes": {
+        "1": {
+            "label": "Clunk or single tick?",
+            "terminal": false,
+            "utterance": "Do you hear a clunking noise from your car, as opposed to ticking noise?"
+        },
+        "2": {
+            "label": "Noise on bumps only?",
+            "terminal": false,
+            "utterance": "Does the car make a noise only when you drive over a bump or a dip on the road?"
+        },
+        "3": {
+            "label": "Check struts, shocks, springs, frame welds.",
+            "terminal": true,
+            "utterance": "You either have a failed spot welding or there is a problem with your car's suspension."
+        },
+        "4": {
+            "label": "Check ball joints, brakes, rack and tie rod ends, motor mounts.",
+            "terminal": true,
+            "utterance": "You have a loose bolt or a faulty ball joint. If you hear clunking noise only during heavy acceleration, then check the motor mounts."
+        },
+        "5": {
+            "label": "Only ticks when moving?",
+            "terminal": false,
+            "utterance": "Do you hear ticking sounds only when the car is moving?"
+        },
+        "6": {
+            "label": "Ticks rolling in neutral?",
+            "terminal": false,
+            "utterance": "Does the car make ticking sounds while coasting in neutral?"
+        },
+        "7": {
+            "label": "Frequency drops on shifts?",
+            "terminal": false,
+            "utterance": "Does the ticking noise frequency drop when the car shifts gear?"
+        },
+        "8": {
+            "label": "Only ticks when cold?",
+            "terminal": false,
+            "utterance": "Does the car make ticking sound only when it is cold?"
+        },
+        "9": {
+            "label": "Check exhaust pipe forward of catalytic converter for leaks. Listen for lifter rap on valve cover.",
+            "terminal": true,
+            "utterance": "Your car has an exhaust leak. Please check the exhaust pipeline for leaks and seal them. This should solve your problem."
+        },
+        "11": {
+            "label": "Look for pulley wobble, inspect belts. Check for exhaust manifold leak. Get somebody with better hearing to help you localize where it's coming from on the engine.",
+            "terminal": true,
+            "utterance": "The ticking sound is caused by the exhaust system contracting as it cools down. It's nothing to worry about."
+        },
+        "13": {
+            "label": "Only ticks in turns, curves?",
+            "terminal": false,
+            "utterance": "Do you hear the ticking sound only when you take a turn or when the road curves?"
+        },
+        "14": {
+            "label": "CV joint going or tire too big for wheel well(but not for long).",
+            "terminal": true,
+            "utterance": "This is an indication that the CV (Constant Velocity) joint bearings are failing. Please get them fixed."
+        },
+        "15": {
+            "label": "Just changed tires?",
+            "terminal": false,
+            "utterance": "Did you recently change your car tires?"
+        },
+        "16": {
+            "label": "Stop driving (and surfing the web) now! Make sure the wheel lugs were tightened.",
+            "terminal": true,
+            "utterance": "You have loose wheel lugs. Please tighten the lug nuts. This should fix the noise from your car."
+        },
+        "17": {
+            "label": "Removed hubcaps?",
+            "terminal": false,
+            "utterance": "Does any of your tires have a loose hub cap?"
+        },
+        "18": {
+            "label": "Inspect tire threads?",
+            "terminal": false,
+            "utterance": "Did you recently inspect the threads in your car tires?"
+        },
+        "19": {
+            "label": "Ticks only slow speed?",
+            "terminal": false,
+            "utterance": "Do you hear the ticking sounds only when you drive at a slow speed? "
+        },
+        "20": {
+            "label": "Check bolted wheel covers, hub protectors for pebbles.",
+            "terminal": true,
+            "utterance": "Please check the bolted wheel covers and hub protectors. They may have picked up some pebbles that would bounce around until the car picks up speed."
+        },
+        "21": {
+            "label": "Likely brake pads ticking on warped rotor, also check axles for rubbing.",
+            "terminal": true,
+            "utterance": "You have the classic warped rotor problem. Please check the rotor and brake pads."
+        },
+        "22": {
+            "label": "Check for nails or stones embedded in tire thread.",
+            "terminal": true,
+            "utterance": "You probably have nails or pebbles caught in your tire threads. Please remove them."
+        },
+        "23": {
+            "label": "Remove hubcaps before proceeding. Loose wire retainer, pebbles can tick.",
+            "terminal": true,
+            "utterance": "The wire ring in the loose hub cap is making the noise. Please remove the loose hubcap. This should fix your problem."
+        },
+        "24": {
+            "label": "Ticks only in reverse?",
+            "terminal": false,
+            "utterance": "Does the car make ticking sounds only when in reverse gear?"
+        },
+        "25": {
+            "label": "Possible rear brake adjuster, make sure parking brake fully released.",
+            "terminal": true,
+            "utterance": "Please check if the parking brake is fully released. If it is fully released, then you have a problem with the brake adjusters."
+        },
+        "26": {
+            "label": "Possible transmission tick. Check transmission fluid, filter.",
+            "terminal": true,
+            "utterance": "The ticking noises are coming from the transmission. Please check the transmission fluid and filter."
+        }
+    },
+    "edges": {
+        "1": {
+            "yes": "2",
+            "no": "5"
+        },
+        "2": {
+            "yes": "3",
+            "no": "4"
+        },
+        "5": {
+            "yes": "6",
+            "no": "8"
+        },
+        "6": {
+            "yes": "7",
+            "no": "24"
+        },
+        "7": {
+            "no": "13"
+        },
+        "8": {
+            "yes": "9",
+            "no": "11"
+        },
+        "13": {
+            "yes": "14",
+            "no": "15"
+        },
+        "15": {
+            "yes": "16",
+            "no": "17"
+        },
+        "17": {
+            "yes": "23",
+            "no": "18"
+        },
+        "18": {
+            "yes": "19",
+            "no": "22"
+        },
+        "19": {
+            "yes": "20",
+            "no": "21"
+        },
+        "24": {
+            "yes": "25",
+            "no": "26"
+        }
+    },
+    "supporting_faqs": [
+        {
+            "q": "How does it help to know if the car is making a clunking noise?",
+            "a": "The ticking or clunking sounds usually originate from the wheels or the engine. Clunks and thuds are not associated with the engine.",
+            "id": "0"
+        },
+        {
+            "q": "How do I know if the clunking noise is due to the suspension parts?",
+            "a": "If there is a problem with the suspension parts, then you can replicate the noise without the car running by bouncing that corner of the car that makes the noise.",
+            "id": "1"
+        },
+        {
+            "q": "why is it necessary to know if the ticking sounds persist with the car in neutral?",
+            "a": "If you hear the ticks when the car is in neutral, then we can rule out any issues with the transmission.",
+            "id": "2"
+        },
+        {
+            "q": "Why is it necessary to know if the ticking noise frequency drops when the car shifts gear?",
+            "a": "If you hear a continuous ticking noise that slowly builds frequency as you accelerate and then drops when the car shifts gears, then it's not related to the wheels, whose rotational speed is directly proportional to the speed of the car.",
+            "id": "3"
+        },
+        {
+            "q": "How do I know if my car is cold or not?",
+            "a": "The temperate gauge on the dashboard indicates the engine's coolant temperature. If the gauge is pointing towards the blue end, then your car is cold. Otherwise, it's hot.",
+            "id": "4"
+        },
+        {
+            "q": "How do I fix a leak in exhaust pipeline?",
+            "a": "If your exhaust pipe has a leak, then it can be resolved using an exhaust tape. But if the pipe has excessive rusting then it's better to replace it.",
+            "id": "5"
+        },
+        {
+            "q": "Is it safe to drive my car with an exhaust leak?",
+            "a": "It is not safe to drive a car with an exhaust leak. The leak can fill the car cabin with harmful carbon monoxide.",
+            "id": "6"
+        }
+    ]
+}
