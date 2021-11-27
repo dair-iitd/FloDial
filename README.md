@@ -10,13 +10,22 @@ Flowchart Grounded Dialog Dataset (FloDial) is a corpus of troubleshooting dialo
 
 We create two different splits of the dialogs in FloDial. In the Seen Flowcharts (*S-Flo*) split, the test dialogs are grounded on flowcharts seen at train time. This split can be used to study the ability of a dialog system to generate responses by following flowchart and FAQs. In the Unseen Flowcharts *U-Flo* split, the test dialogs are grounded on new flowcharts that were unseen during train. This split is used to study the ability of dialog system to generalize to flowcharts unseen during train in a zero-shot flowchart grounded response generation setting.
 
-This reposirtory only contains the dialogs in the train and the validation sets. The test sets are hidden. To measure the accuracy of your model on the test set, we are in the process of seting up an evaluation page where you can submit your model to compute test metrics (such as BLEU, Recall@1 and Success Rate).
-
-If you wish to measure any other metric, please contact us and we will be happy to add that as a part of the evaluation.
+This reposirtory only contains the dialogs in the train and the validation sets. The test sets are hidden. We are in the process of seting up an evaluation page where you can submit your model and get the performance on the hidden test set (such as BLEU, Recall@1 and Success Rate).
 
 ## Data Structure
 
 The collected dialogs are present in the `dialogs` folder and the associated knowledge sources (flowcharts and FAQs) are present in the `knowledge-sources` folder.
+
+### Dialogs
+All the dialogs are present in `dialogs.json`. The *S-Flo* and the *U-Flo* split are mentioned in the `s-flo.json` and `u-flo.json` respectively.
+
+Each dialog is a key-value pair, where the key represents the `dialog-id` and the value contains the actual dialog. The value has the following structure:
+- **utterences**: a list of utterances in the dialog. Each utterance has the following structure
+  - **speaker**: speaker of the utterance (user/agent)
+  - **utterance**: the utterance text
+  - **turn_id**: indicate the turn in the dialog
+  - **grounded_doc_id**: points to the node in the flowchart or FQA on which the utterance is grounded on 
+- **flowchart**: contains the name of the flowchart on which the dialog is grounded on. This should match the `name` attribute of the flowchart present in the `knowledge-sources` folder. 
 
 ## Citation
 Please cite the following paper if you use this dataset in your work 
