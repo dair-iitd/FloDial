@@ -4,11 +4,11 @@
   <img align="centre" height="150" src="https://dair-iitd.github.io/FloDial/flodial.png">
 </p>
 
-Flowchart Grounded Dialog Dataset (FloDial) is a corpus of troubleshooting dialogs between a user and an agent collected using Amazon Mechanical Turk. The dataset is accompanied with two knowledge sources over which the dialogs are grounded: (1) a set of troubleshooting flowcharts and (2) a set of FAQs which contains supplementary information about the domain not present in the flowchart. FloDial consists of 2,738 dialogs grounded on 12 different troubleshooting flowcharts.
+Flowchart Grounded Dialog Dataset (FloDial) is a corpus of troubleshooting dialogs between a user and an agent collected using Amazon Mechanical Turk. The dataset is accompanied with two knowledge sources over which the dialogs are grounded: (1) a set of troubleshooting flowcharts and (2) a set of FAQs which contains supplementary information about the domain not present in the flowchart.
 
 ## Data Splits
 
-We create two different splits of the dialogs in FloDial. In the Seen Flowcharts (*S-Flo*) split, the test dialogs are grounded on flowcharts seen at train time. This split can be used to study the ability of a dialog system to generate responses by following flowchart and FAQs. In the Unseen Flowcharts *U-Flo* split, the test dialogs are grounded on new flowcharts that were unseen during train. This split is used to study the ability of dialog system to generalize to flowcharts unseen during train in a zero-shot flowchart grounded response generation setting.
+We create two different splits of the dialogs in FloDial. In the Seen Flowcharts (*S-Flo*) split, the test dialogs are grounded on flowcharts seen at train time. In the Unseen Flowcharts *U-Flo* split, the test dialogs are grounded on new flowcharts that were unseen during train.
 
 This reposirtory only contains the dialogs in the train and the validation sets. The test sets are hidden. We are in the process of seting up an evaluation page where you can submit your model and get the performance on the hidden test set (such as BLEU, Recall@1 and Success Rate).
 
