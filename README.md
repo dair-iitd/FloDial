@@ -1,4 +1,24 @@
-# FloDial: Flowchart Grounded Task Oriented Dialogs <img align="right" height="40" src="https://dair-iitd.github.io/FloDial/flodial.png">
+# FloDial: Flowchart Grounded Task Oriented Dialogs 
+
+
+<table bgcolor=#0f62fe>
+  <tr>
+    <td width="22%" align="left">
+      <img src="https://dair-iitd.github.io/FloDial/logo-iit.png" alt="IIT-D" style="max-width: 60%;">
+    </td>
+    <td>
+      <div class="row" align="center">
+        <div class="col-md-12">
+          <!--<h1 id="appTitle">FloDial</h1>-->
+          <img src="https://dair-iitd.github.io/FloDial/flodial.png" alt="FloDial" style="max-width: 100%;">
+        </div>
+      </div>
+    </td>
+    <td width="25%" align="right">
+        &nbsp;&nbsp;&nbsp;&nbsp;<img src="https://dair-iitd.github.io/FloDial/core_gray10_on_blue60.svg" alt="IBM" style="max-width: 75%;">
+    </td>
+  </tr>
+</table>
 
 Flowchart Grounded Dialog Dataset (FloDial) is a corpus of troubleshooting dialogs between a user and an agent collected using Amazon Mechanical Turk. The dataset is accompanied with two knowledge sources over which the dialogs are grounded: (1) a set of troubleshooting flowcharts and (2) a set of FAQs which contains supplementary information about the domain not present in the flowchart. FloDial consists of 2,738 dialogs grounded on 12 different troubleshooting flowcharts.
 
