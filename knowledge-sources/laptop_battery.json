@@ -1,0 +1,228 @@
+{
+    "name": "laptop_battery",
+    "category": "laptops",
+    "problem_description": "Your have an issue with your laptop battery.",
+    "nodes": {
+        "1": {
+            "label": "needs AC adapter to boot?",
+            "terminal": false,
+            "utterance": "Does the laptop power up without the charger plugged in?"
+        },
+        "2": {
+            "label": "life of battery too short?",
+            "terminal": false,
+            "utterance": "Does your laptop battery drain out quickly?"
+        },
+        "3": {
+            "label": "AC adapter noisy?",
+            "terminal": false,
+            "utterance": "Is your AC power adapter making a humming or whistling noise?"
+        },
+        "4": {
+            "label": "Replace adapter if too annoying or fails to charge",
+            "terminal": true,
+            "utterance": "You should replace the power adapter. That should help you with your battery problem."
+        },
+        "5": {
+            "label": "OS Battery management active?",
+            "terminal": false,
+            "utterance": "Is the power plan in Windows OS settings set to \"high performance\"?"
+        },
+        "6": {
+            "label": "Battery should be managed by ACPI no APM",
+            "terminal": true,
+            "utterance": "The BIOS power controller is active and set to high performance. This is causing your battery to drain rapidly. To fix the issue, please disable the BIOS power controller."
+        },
+        "7": {
+            "label": "ACPI manages and extends battery life for different applications and is customizable",
+            "terminal": true,
+            "utterance": "Please change the power plan in Windows OS settings to \"power saver\". This should prevent the battery from draining quickly."
+        },
+        "8": {
+            "label": "is battery new?",
+            "terminal": false,
+            "utterance": "Please check your laptop battery's manufacture date. Is the battery more than a year old?"
+        },
+        "9": {
+            "label": "runs with battery always?",
+            "terminal": false,
+            "utterance": "Do you always work with the AC power adapter plugged in?"
+        },
+        "10": {
+            "label": "if permissible, try running without battery and only installing battery when mobility required",
+            "terminal": true,
+            "utterance": "Your battery life has dropped down. So, I recommend you to replace the battery. For a good battery life, please let the battery drain completely once a month."
+        },
+        "11": {
+            "label": "live longer in bios",
+            "terminal": false,
+            "utterance": "Please enter the BIOS screen and measure the time it takes the laptop battery to run down. Did your battery last longer than usual?"
+        },
+        "12": {
+            "label": "either dead battery not taking a real charge, self discharging, or some hardware overdraw",
+            "terminal": true,
+            "utterance": "I have narrowed down your problem. The short battery life is due to a faulty battery or a hardware failure that causes the laptop to continually suck power when it shouldn't. "
+        },
+        "13": {
+            "label": "user condition battery",
+            "terminal": false,
+            "utterance": "Did you condition the laptop battery in the last three months?"
+        },
+        "14": {
+            "label": "attempt to recondition or recalibrate",
+            "terminal": true,
+            "utterance": "Please condition your laptop battery. This should solve your problem."
+        },
+        "15": {
+            "label": "DC voltage good?",
+            "terminal": false,
+            "utterance": "Check the voltage at the output of your AC adapter. Does the measured voltage match the rated voltage on the adapter?"
+        },
+        "16": {
+            "label": "check connector to ensure conductor not broken in boot",
+            "terminal": true,
+            "utterance": "Your battery charger is malfunctioning. Please replace your battery charger."
+        },
+        "17": {
+            "label": "LED for charging blink?",
+            "terminal": false,
+            "utterance": "Is the LED on your laptop battery charger blinking?"
+        },
+        "18": {
+            "label": "see user manual for model. Battery may be over-discharged",
+            "terminal": true,
+            "utterance": "Your battery is over-discharged. Please use a smart charger to recharge your battery. If the battery puffs or heats much, please replace your battery."
+        },
+        "19": {
+            "label": "does battery get hot?",
+            "terminal": false,
+            "utterance": "Does your battery get too hot to touch?"
+        },
+        "20": {
+            "label": "all batteries heat up charging, but not too hot to touch",
+            "terminal": true,
+            "utterance": "You should change the Windows power plan to prevent rapid power drain. Also, consider using a cooling pad if the ambient air temperature is high."
+        },
+        "21": {
+            "label": "latch locks tight",
+            "terminal": false,
+            "utterance": "Please remove the battery and install it back. Did you hear a click when you installed the laptop battery?"
+        },
+        "22": {
+            "label": "battery must be installed properly both to charge and to operate laptop",
+            "terminal": true,
+            "utterance": "I have narrowed down your problem. If your battery is bulged, please replace the battery. Otherwise, your the battery latch is damaged."
+        },
+        "23": {
+            "label": "Check battery in other notebook if available.",
+            "terminal": true,
+            "utterance": "Try your battery in other laptops. If it doesn't work then you need to replace it."
+        },
+        "24": {
+            "label": "EXTRA-Configure your BIOS power settings again.",
+            "terminal": true,
+            "utterance": "Please change the power plan in Windows OS settings to \"power saver\". This should prevent the battery from draining quickly."
+        }
+    },
+    "edges": {
+        "1": {
+            "no": "15",
+            "yes": "2"
+        },
+        "2": {
+            "no": "3",
+            "yes": "8"
+        },
+        "3": {
+            "yes": "4"
+        },
+        "5": {
+            "no": "6",
+            "yes": "7"
+        },
+        "8": {
+            "no": "9",
+            "yes": "13"
+        },
+        "9": {
+            "no": "11",
+            "yes": "10"
+        },
+        "11": {
+            "no": "12",
+            "yes": "5"
+        },
+        "13": {
+            "no": "14",
+            "yes": "24"
+        },
+        "15": {
+            "no": "16",
+            "yes": "17"
+        },
+        "17": {
+            "no": "19",
+            "yes": "18"
+        },
+        "19": {
+            "no": "21",
+            "yes": "20"
+        },
+        "21": {
+            "no": "22",
+            "yes": "23"
+        }
+    },
+    "supporting_faqs": [
+        {
+            "q": "what is the best way to optimize battery performance?",
+            "a": "Batteries of all technologies can perform poorly through non-ideal usage patterns. You can refer to the manual for suggested pattern. Even then, the Li-ION battery technology is pretty resistant.",
+            "id": "0"
+        },
+        {
+            "q": "Why does a laptop adapter make noises?",
+            "a": "Battery chargers typically include a transformer and some power IC's, at least a bridge rectifier. There's a lot of potential for humming and whistling with transformers, but they can go on operating that way for years without failing.",
+            "id": "1"
+        },
+        {
+            "q": "How do I check if the power plan in Windows OS is set to \"high performance\"?",
+            "a": "You can check the active power plan under the \"Advanced settings\" tab in the \"Power Options\".",
+            "id": "2"
+        },
+        {
+            "q": "What is BIOS?",
+            "a": "BIOS stands for 'Basic Input Output System' and it is the set of instructions that are used when you start your computer. It initialises your hardware, loads up the operating system and performs other such booting tasks.",
+            "id": "3"
+        },
+        {
+            "q": "How do I open BIOS?",
+            "a": "You can access BIOS by hitting the DEL key, the F1 or F2 key immediately after you power on. You can always go online and Google the right key combination if it's not in your manual.",
+            "id": "4"
+        },
+        {
+            "q": "How do I check my laptop battery's manufacture date?",
+            "a": "Please remove the battery and you will find a sticker on it with a multi-field part number. The fourth field in the part number corresponds to the manufacturing date.",
+            "id": "5"
+        },
+        {
+            "q": "What does \"condition the battery\" mean and how do I it?",
+            "a": "Battery conditioning means training the individual battery cells into a pattern of giving as much power as they can and accepting the largest charge that they can. The most general procedure to condition your battery is to charge the battery fully before use and then run exclusively on battery until the battery is discharged.",
+            "id": "6"
+        },
+        {
+            "q": "how do I check the DC voltage output of your battery charger?",
+            "a": "You can check the voltage at the output of your AC adapter with a DC voltmeter, right on the barrel connector that gets plugged into the laptop.",
+            "id": "7"
+        },
+        {
+            "q": "Should the measured voltage exactly match the rated voltage on the adapter?",
+            "a": "The rule of thumb for acceptable readings on power adapter output is usually a 5% variation either way of the voltage metioned on the adapter label.",
+            "id": "8"
+        },
+        {
+            "q": "What is a smart charger? Is it different from my laptop charger?",
+            "a": "A smart charger is not the same as your laptop charger. It is used for reviving over-discharged batteries. It initially charges very slowly and then gradually increases the charge rate.",
+            "id": "9"
+        }
+    ]
+}

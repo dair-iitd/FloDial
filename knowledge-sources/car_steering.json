@@ -1,0 +1,298 @@
+{
+    "name": "car_steering",
+    "category": "laptops",
+    "problem_description": "Your car's steering has some issues.",
+    "nodes": {
+        "1": {
+            "label": "loose steering or wheel",
+            "terminal": false,
+            "utterance": "Does your steering wheel turn a few inches without the wheels rotating?"
+        },
+        "2": {
+            "label": "lug nuts loose",
+            "terminal": false,
+            "utterance": "Do any of the wheels have loose lug nuts?"
+        },
+        "3": {
+            "label": "tighten lug nuts, make sure not cross threaded",
+            "terminal": true,
+            "utterance": "Please tighten the lug nuts. If this happens frequently, you might want to replace them."
+        },
+        "4": {
+            "label": "axle nut loose",
+            "terminal": false,
+            "utterance": "Is the axle nut loose for any of the wheels?"
+        },
+        "5": {
+            "label": "check bearing, torque nut, install cotter pin and lock",
+            "terminal": true,
+            "utterance": "The cotter pin is improperly installed or damaged. Please reinstall a new one."
+        },
+        "6": {
+            "label": "strut or spring bad",
+            "terminal": false,
+            "utterance": "Is your car unusually bumpy when you drive over potholes or uneven road?"
+        },
+        "7": {
+            "label": "lower ball joint bad",
+            "terminal": false,
+            "utterance": "Please jack up the car and shake the wheels up and down. Does any wheel produce a clunking sound?"
+        },
+        "8": {
+            "label": "replace ball joint",
+            "terminal": true,
+            "utterance": "The lower ball joint is worn out. Please replace it to fix the issue."
+        },
+        "9": {
+            "label": "tie-rod loose?",
+            "terminal": false,
+            "utterance": "With the car jacked up, shake the wheels sideways. Does any wheel produce a ticking sound?"
+        },
+        "10": {
+            "label": "steering coupling tight?",
+            "terminal": false,
+            "utterance": "Do you hear a clunking sound when you turn your steering wheel from side to side?"
+        },
+        "11": {
+            "label": "repair coupling",
+            "terminal": true,
+            "utterance": "The steering coupling is worn out and you should get it replaced."
+        },
+        "12": {
+            "label": "rack mounting loose?",
+            "terminal": false,
+            "utterance": "Is the steering rack loose when you shake it with hand?"
+        },
+        "13": {
+            "label": "pump problems, including low fluid if jerky. Rack or pump failure",
+            "terminal": true,
+            "utterance": "It seems like you have a power steering pump problem. Either the drive belt on the pump is loose or the pump itself is failing."
+        },
+        "14": {
+            "label": "tighten or replace all rack mounting bolts, check cross-member mounting, attachments to lower control arms, sway bar",
+            "terminal": true,
+            "utterance": "Tighten the mounting bolts to make sure the rack is safely secured in place. This should fix your problem."
+        },
+        "15": {
+            "label": "loose at tie rod joint with steering knuckle, mark position for alignment and replace",
+            "terminal": true,
+            "utterance": "The ticking sound is a sign of looseness in the tie rod. Please replace the rod if it's worn out."
+        },
+        "16": {
+            "label": "replace strut, spring or retainers as needed and realign",
+            "terminal": true,
+            "utterance": "Your suspension has failed. You should get the strut replaced."
+        },
+        "17": {
+            "label": "steering pulls?",
+            "terminal": false,
+            "utterance": "Does the steering wheel pull to one side or the other as you drive on a straight road?"
+        },
+        "18": {
+            "label": "impact damage?",
+            "terminal": false,
+            "utterance": "Did you hit something recently, like a pot hole, curb, or another car?"
+        },
+        "19": {
+            "label": "if the wheel pulls following hitting a curb, pothole or anything else, a bent part is likely",
+            "terminal": true,
+            "utterance": "You might have a bent part in your steering or suspension system which is messing up the alignment. Please get it checked to resolve the problem."
+        },
+        "20": {
+            "label": "uneven tire wear?",
+            "terminal": false,
+            "utterance": "Are any of the tires worn out unevenly?"
+        },
+        "21": {
+            "label": "toe or camber adjustment",
+            "terminal": true,
+            "utterance": "Please check if the tires are inflated properly. If they are, then your car needs a toe or camber adjustment."
+        },
+        "22": {
+            "label": "re-check alignment, possible rack or suspension problem",
+            "terminal": true,
+            "utterance": "The alignment of your steering system is off. Please get it fixed."
+        },
+        "23": {
+            "label": "steering hard?",
+            "terminal": false,
+            "utterance": "Is the steering hard when the car is stationary?"
+        },
+        "24": {
+            "label": "steering noise?",
+            "terminal": false,
+            "utterance": "Is your car's steering making any noise?"
+        },
+        "25": {
+            "label": "all power steering makes some noise, but check pump",
+            "terminal": true,
+            "utterance": "The belt on the power steering pump is loose. Please get it fixed."
+        },
+        "26": {
+            "label": "check power steering pump, belt, tire inflation",
+            "terminal": true,
+            "utterance": "You have a power steering pump failure. Either the pump pressure is low or the fluid level is low."
+        },
+        "27": {
+            "label": "power steering leak?",
+            "terminal": false,
+            "utterance": "Is the power steering fluid dripping out from the pump or the hydraulic fittings?"
+        },
+        "28": {
+            "label": "check pump, lines, rack seals. Replace or rebuild as necessary",
+            "terminal": true,
+            "utterance": "Wipe off the pump with a paper towel and use a flashlight to find the leak. Seal it up to fix the problem with your steering."
+        },
+        "29": {
+            "label": "vibration at speed?",
+            "terminal": false,
+            "utterance": "Does the car vibrate when you drive it at a high speed?"
+        },
+        "30": {
+            "label": "vibration when the car isn't moving is engine or transmission/transaxle related",
+            "terminal": true,
+            "utterance": "This is not a car steering problem. This might be related to the engine or the automatic transmission. Hope this helps."
+        },
+        "31": {
+            "label": "Improves on tire rotation?",
+            "terminal": false,
+            "utterance": "Does the vibration reduce as the speed increases?"
+        },
+        "32": {
+            "label": "tire damage, bent rim?",
+            "terminal": false,
+            "utterance": "Do the car tires show signs of damage?"
+        },
+        "33": {
+            "label": "rebalance tires",
+            "terminal": true,
+            "utterance": "Vibrations at higher speeds are most often caused by improper wheel balance. Rebalancing the tires should resolve your problem."
+        },
+        "34": {
+            "label": "if visual inspection shows tire damage or bent rim, replace",
+            "terminal": true,
+            "utterance": "Damaged tires are the root cause of the problem. Replace the damage part to fix the problem."
+        },
+        "35": {
+            "label": "CV joint bad?",
+            "terminal": false,
+            "utterance": "Please check if the CV joints are loose or worn out?"
+        },
+        "36": {
+            "label": "replace or rebuilt CV joint",
+            "terminal": true,
+            "utterance": "If the CV joints are loose, then tighten them. If they are worn out, then consider replacing them."
+        },
+        "37": {
+            "label": "check if axle bent, otherwise go through loose steering checks",
+            "terminal": true,
+            "utterance": "You have a bent axle. You need to get you axle replaced immediately."
+        }
+    },
+    "edges": {
+        "1": {
+            "no": "17",
+            "yes": "2"
+        },
+        "2": {
+            "no": "4",
+            "yes": "3"
+        },
+        "4": {
+            "no": "6",
+            "yes": "5"
+        },
+        "6": {
+            "no": "7",
+            "yes": "16"
+        },
+        "7": {
+            "no": "9",
+            "yes": "8"
+        },
+        "9": {
+            "no": "10",
+            "yes": "15"
+        },
+        "10": {
+            "no": "12",
+            "yes": "11"
+        },
+        "12": {
+            "no": "13",
+            "yes": "14"
+        },
+        "17": {
+            "no": "23",
+            "yes": "18"
+        },
+        "18": {
+            "no": "20",
+            "yes": "19"
+        },
+        "20": {
+            "no": "22",
+            "yes": "21"
+        },
+        "23": {
+            "no": "24",
+            "yes": "26"
+        },
+        "24": {
+            "no": "27",
+            "yes": "25"
+        },
+        "27": {
+            "no": "29",
+            "yes": "28"
+        },
+        "29": {
+            "no": "30",
+            "yes": "31"
+        },
+        "31": {
+            "no": "35",
+            "yes": "32"
+        },
+        "32": {
+            "no": "33",
+            "yes": "34"
+        },
+        "35": {
+            "no": "37",
+            "yes": "36"
+        }
+    },
+    "supporting_faqs": [
+        {
+            "q": "What is an axle nut and where do I find it?",
+            "a": "Axle nut secures the wheel on the axle. It is located at the center of the wheel under the hub cover. This nut makes sure that the wheel spins.",
+            "id": "0"
+        },
+        {
+            "q": "What is a lower ball joint?",
+            "a": "The lower ball joint is the main connection holding the steering knuckle, and thus the wheel, onto the car.",
+            "id": "1"
+        },
+        {
+            "q": "What do you mean by unevenly worn out tires?",
+            "a": "The treads in the center of the tire should wear at the same rate as the treads at the edges. If not, the tire is unevenly worn out.",
+            "id": "2"
+        },
+        {
+            "q": "How do I know if the tires are inflated properly?",
+            "a": "If the treads at the center are worn out, then the tire is overinflated. If the treads on the edges are worn out, then the tire is underinflated. Otherwise, the tires are properly inflated.",
+            "id": "3"
+        },
+        {
+            "q": "How do I do know if I need a toe or camber adjustment?",
+            "a": "If the tire tread is worn out only on one side, then you need a camber adjustment. If you have feathering on front tires, then you need a toe adjustment.",
+            "id": "4"
+        },
+        {
+            "q": "How do I check the pump pressure of my power steering?",
+            "a": "You can get a pressure gauge and check the pressure the power steering pump is generating. Use a shop manual to find out what that ideal pressure should be.",
+            "id": "5"
+        }
+    ]
+}
